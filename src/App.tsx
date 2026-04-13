@@ -1,281 +1,338 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
+// Premium easing curve for silky smooth animations
+const premiumEase = [0.22, 1, 0.36, 1];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: 0.4, ease: premiumEase }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 1, ease: premiumEase } 
+  },
+};
+
 const Vision = () => (
-  <div className="space-y-8 max-w-4xl">
-    <h2 className="text-[#d4af37] text-sm tracking-[0.3em] uppercase">Strategic Architecture</h2>
-    <h1 className="font-serif text-4xl md:text-6xl leading-tight">
-      Entering the Indian Luxury Bridal Market.
-    </h1>
-    <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-light">
-      An exclusive roadmap to transition @makeoversbyniki from a highly sought-after international artist to a dominant, culturally resonant luxury authority in India. The Indian market demands "Editorial Realism"—we are moving away from traditional makeup application and toward high-end beauty engineering.
-    </p>
+  <motion.div 
+    variants={containerVariants}
+    initial="hidden"
+    animate="show"
+    exit="exit"
+    className="space-y-12 max-w-5xl"
+  >
+    <motion.h2 variants={itemVariants} className="text-[#d4af37] text-xs md:text-sm tracking-[0.4em] uppercase">
+      Strategic Architecture
+    </motion.h2>
+    <motion.h1 variants={itemVariants} className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight">
+      Entering the Indian <br className="hidden md:block" />
+      <span className="italic text-white/90">Luxury Bridal</span> Market.
+    </motion.h1>
+    <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-400 leading-relaxed font-light max-w-3xl">
+      An exclusive roadmap to transition @makeoversbyniki from a highly sought-after international artist to a dominant, culturally resonant luxury authority in India. The Indian market demands <span className="text-white">"Editorial Realism"</span>—we are moving away from traditional makeup application and toward high-end beauty engineering.
+    </motion.p>
     
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-      <div className="bg-[#1a1a1a] p-8 border border-white/5 hover:border-[#d4af37]/30 transition-colors duration-500">
-        <h3 className="text-[#d4af37] text-sm tracking-widest uppercase mb-4">The Market Gap</h3>
-        <p className="text-gray-400 font-light leading-relaxed">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 mt-20 pt-12 border-t border-white/10">
+      <motion.div variants={itemVariants} className="group">
+        <h3 className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-6 flex items-center gap-4">
+          <span className="w-8 h-[1px] bg-[#d4af37]"></span> The Market Gap
+        </h3>
+        <p className="text-gray-400 font-light leading-relaxed text-lg">
           The Indian luxury bridal market is saturated with heavy, transformative makeup. High-Net-Worth (HNW) brides are actively seeking international polish—clean, skin-focused, "Editorial Realism"—but struggle to find artists who understand both global aesthetics and South Asian skin nuances.
         </p>
-      </div>
-      <div className="bg-[#1a1a1a] p-8 border border-white/5 hover:border-[#d4af37]/30 transition-colors duration-500">
-        <h3 className="text-[#d4af37] text-sm tracking-widest uppercase mb-4">The Positioning</h3>
-        <p className="text-gray-400 font-light leading-relaxed">
-          We will position you not just as a makeup artist, but as a "Beauty Architect." By leveraging your international experience and applying it to the cultural expectations of Indian weddings, we create an uncontested premium category that commands higher rates.
+      </motion.div>
+      <motion.div variants={itemVariants} className="group">
+        <h3 className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-6 flex items-center gap-4">
+          <span className="w-8 h-[1px] bg-[#d4af37]"></span> The Positioning
+        </h3>
+        <p className="text-gray-400 font-light leading-relaxed text-lg">
+          We will position you not just as a makeup artist, but as a <span className="text-white">"Beauty Architect."</span> By leveraging your international experience and applying it to the cultural expectations of Indian weddings, we create an uncontested premium category that commands higher rates.
         </p>
-      </div>
+      </motion.div>
     </div>
-  </div>
+  </motion.div>
+);
+
+const PhaseCard = ({ number, title, description, details }: { number: string, title: string, description: string, details: string[] }) => (
+  <motion.div variants={itemVariants} className="flex flex-col border-t border-white/10 pt-8 hover:border-[#d4af37]/50 transition-colors duration-700 group">
+    <div className="font-serif text-5xl text-white/10 mb-6 group-hover:text-[#d4af37]/20 transition-colors duration-700">{number}</div>
+    <h3 className="font-serif text-3xl mb-6 group-hover:text-[#d4af37] transition-colors duration-700">{title}</h3>
+    <p className="text-gray-400 leading-relaxed font-light mb-12 text-lg flex-grow">
+      {description}
+    </p>
+    <div className="pl-6 border-l border-[#d4af37]/30">
+      <h4 className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-6">Execution Details</h4>
+      <ul className="space-y-4 text-gray-300 font-light text-sm md:text-base">
+        {details.map((detail, idx) => (
+          <li key={idx} className="flex items-start">
+            <span className="text-[#d4af37] mr-4 mt-1 text-xs">✦</span>
+            <span className="leading-relaxed">{detail}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </motion.div>
 );
 
 const Phase1 = () => (
-  <div className="space-y-12">
-    <h1 className="font-serif text-3xl md:text-5xl leading-tight text-center md:text-left">
-      Phase 1: Visual Identity & Cinematic Production
-    </h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div className="bg-[#1a1a1a] p-10 border border-white/5 hover:border-[#d4af37]/30 transition-colors duration-500 group flex flex-col">
-        <div className="text-[#d4af37] mb-6">01</div>
-        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors">Studio-Grade Portfolio Development</h3>
-        <p className="text-gray-400 leading-relaxed font-light mb-8 flex-grow">
-          Direction and execution of localized conceptual shoots utilizing advanced dimensional lighting setups to showcase accurate skin texture and color grading.
-        </p>
-        <div className="pt-8 border-t border-white/10">
-          <h4 className="text-[#d4af37] text-xs tracking-[0.2em] uppercase mb-4">Execution Details</h4>
-          <ul className="space-y-3 text-gray-300 font-light text-sm">
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Develop moodboards focusing on South Asian features with international editorial lighting.</span></li>
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Cast specific models that reflect the target HNW demographic and aesthetic.</span></li>
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Direct on-set lighting to highlight raw skin texture, strictly avoiding the "filtered" look.</span></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div className="bg-[#1a1a1a] p-10 border border-white/5 hover:border-[#d4af37]/30 transition-colors duration-500 group flex flex-col">
-        <div className="text-[#d4af37] mb-6">02</div>
-        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors">The "Cinematic Portraiture" IP</h3>
-        <p className="text-gray-400 leading-relaxed font-light mb-8 flex-grow">
-          Development of a signature, professionally lit "First Look" video package, utilizing cinema-line equipment, to upsell to brides as an exclusive add-on.
-        </p>
-        <div className="pt-8 border-t border-white/10">
-          <h4 className="text-[#d4af37] text-xs tracking-[0.2em] uppercase mb-4">Execution Details</h4>
-          <ul className="space-y-3 text-gray-300 font-light text-sm">
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Script and storyboard a signature 60-second bridal reveal format unique to your brand.</span></li>
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Hire cinema-grade videographers (RED/Sony FX) for premium color grading and slow-motion capture.</span></li>
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Package this as a high-ticket add-on for exclusive bookings to increase average order value.</span></li>
-          </ul>
-        </div>
-      </div>
+  <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="space-y-16">
+    <motion.h1 variants={itemVariants} className="font-serif text-4xl md:text-6xl leading-tight">
+      Phase 1: Visual Identity <br className="hidden md:block"/>& Cinematic Production
+    </motion.h1>
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16">
+      <PhaseCard 
+        number="01"
+        title="Studio-Grade Portfolio Development"
+        description="Direction and execution of localized conceptual shoots utilizing advanced dimensional lighting setups to showcase accurate skin texture and color grading."
+        details={[
+          "Develop moodboards focusing on South Asian features with international editorial lighting.",
+          "Cast specific models that reflect the target HNW demographic and aesthetic.",
+          "Direct on-set lighting to highlight raw skin texture, strictly avoiding the 'filtered' look."
+        ]}
+      />
+      <PhaseCard 
+        number="02"
+        title="The 'Cinematic Portraiture' IP"
+        description="Development of a signature, professionally lit 'First Look' video package, utilizing cinema-line equipment, to upsell to brides as an exclusive add-on."
+        details={[
+          "Script and storyboard a signature 60-second bridal reveal format unique to your brand.",
+          "Hire cinema-grade videographers (RED/Sony FX) for premium color grading and slow-motion capture.",
+          "Package this as a high-ticket add-on for exclusive bookings to increase average order value."
+        ]}
+      />
+      <PhaseCard 
+        number="03"
+        title="Premium Social Assets"
+        description="Extraction of high-quality, shareable micro-content (Reels, Stories) derived from the studio shoots and cinematic video packages, optimized for Instagram to drive engagement and high-ticket inquiries."
+        details={[
+          "Edit short-form, high-retention Reels focusing on macro textures and cinematic BTS moments.",
+          "Design premium Instagram Story templates for inquiry generation and availability announcements.",
+          "Implement a strategic posting schedule leveraging the new visual assets to maximize algorithmic reach."
+        ]}
+      />
     </div>
-  </div>
+  </motion.div>
 );
 
 const Phase2 = () => (
-  <div className="space-y-12">
-    <h1 className="font-serif text-3xl md:text-5xl leading-tight text-center md:text-left">
-      Phase 2: Digital Ecosystem Architecture
-    </h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div className="bg-[#1a1a1a] p-10 border border-white/5 hover:border-[#d4af37]/30 transition-colors duration-500 group flex flex-col">
-        <div className="text-[#d4af37] mb-6">01</div>
-        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors">AI-Driven Framework Design</h3>
-        <p className="text-gray-400 leading-relaxed font-light mb-8 flex-grow">
-          Architecting the structural logic for a dynamic, interactive website to segment inquiries (Destination vs. Local vs. Editorial) and automate lead-vetting.
-        </p>
-        <div className="pt-8 border-t border-white/10">
-          <h4 className="text-[#d4af37] text-xs tracking-[0.2em] uppercase mb-4">Execution Details</h4>
-          <ul className="space-y-3 text-gray-300 font-light text-sm">
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Build a high-friction inquiry form to automatically filter out low-budget leads.</span></li>
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Implement automated email sequences tailored specifically to Destination vs. Local weddings.</span></li>
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Design a hidden "Client Portal" for booked brides to elevate the onboarding and prep experience.</span></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div className="bg-[#1a1a1a] p-10 border border-white/5 hover:border-[#d4af37]/30 transition-colors duration-500 group flex flex-col">
-        <div className="text-[#d4af37] mb-6">02</div>
-        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors">Brand Identity Localization</h3>
-        <p className="text-gray-400 leading-relaxed font-light mb-8 flex-grow">
-          Refining typography and brand guidelines to bridge international polish with regional Indian authenticity.
-        </p>
-        <div className="pt-8 border-t border-white/10">
-          <h4 className="text-[#d4af37] text-xs tracking-[0.2em] uppercase mb-4">Execution Details</h4>
-          <ul className="space-y-3 text-gray-300 font-light text-sm">
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Audit and refine current Instagram aesthetics to match the new luxury positioning.</span></li>
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Develop a standardized tone-of-voice guide for all captions, emails, and communications.</span></li>
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Create bespoke typography pairings and color palettes for all digital and physical touchpoints.</span></li>
-          </ul>
-        </div>
-      </div>
+  <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="space-y-16">
+    <motion.h1 variants={itemVariants} className="font-serif text-4xl md:text-6xl leading-tight">
+      Phase 2: Digital Ecosystem <br className="hidden md:block"/>Architecture
+    </motion.h1>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+      <PhaseCard 
+        number="01"
+        title="The Brand Portfolio Website"
+        description="Design and development of a bespoke, high-end digital flagship. This website will act as your premium portfolio, elevating your brand perception far above standard Instagram-only artists."
+        details={[
+          "Custom UI/UX design reflecting the 'Editorial Realism' aesthetic to showcase your portfolio.",
+          "Build a high-friction inquiry form to automatically filter out low-budget leads.",
+          "Design a hidden 'Client Portal' for booked brides to elevate the onboarding and prep experience."
+        ]}
+      />
+      <PhaseCard 
+        number="02"
+        title="Brand Identity Localization"
+        description="Refining typography and brand guidelines to bridge international polish with regional Indian authenticity."
+        details={[
+          "Audit and refine current Instagram aesthetics to match the new luxury positioning.",
+          "Develop a standardized tone-of-voice guide for all captions, emails, and communications.",
+          "Create bespoke typography pairings and color palettes for all digital and physical touchpoints."
+        ]}
+      />
     </div>
-  </div>
+  </motion.div>
 );
 
 const Phase3 = () => (
-  <div className="space-y-12">
-    <h1 className="font-serif text-3xl md:text-5xl leading-tight text-center md:text-left">
-      Phase 3: B2B Network Integration
-    </h1>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div className="bg-[#1a1a1a] p-10 border border-white/5 hover:border-[#d4af37]/30 transition-colors duration-500 group flex flex-col">
-        <div className="text-[#d4af37] mb-6">01</div>
-        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors">The Planner Pitch Deck</h3>
-        <p className="text-gray-400 leading-relaxed font-light mb-8 flex-grow">
-          Design of a visually striking, data-backed presentation aimed directly at top-tier wedding planners and boutique hotel coordinators.
-        </p>
-        <div className="pt-8 border-t border-white/10">
-          <h4 className="text-[#d4af37] text-xs tracking-[0.2em] uppercase mb-4">Execution Details</h4>
-          <ul className="space-y-3 text-gray-300 font-light text-sm">
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Design a 10-page editorial PDF highlighting your unique value proposition to planners.</span></li>
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Outline clear, mutually beneficial commission and partnership structures for B2B referrals.</span></li>
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Draft personalized outreach scripts targeting the top 20 luxury wedding planners in India.</span></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div className="bg-[#1a1a1a] p-10 border border-white/5 hover:border-[#d4af37]/30 transition-colors duration-500 group flex flex-col">
-        <div className="text-[#d4af37] mb-6">02</div>
-        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors">Strategic Collaborations</h3>
-        <p className="text-gray-400 leading-relaxed font-light mb-8 flex-grow">
-          Facilitating conceptual shoots alongside established sustainable Indian fashion labels and heritage jewelry brands to tap into their HNW audiences.
-        </p>
-        <div className="pt-8 border-t border-white/10">
-          <h4 className="text-[#d4af37] text-xs tracking-[0.2em] uppercase mb-4">Execution Details</h4>
-          <ul className="space-y-3 text-gray-300 font-light text-sm">
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Identify 5-7 non-competing luxury brands (jewelry, couture) for cross-promotion.</span></li>
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Pitch and execute joint editorial shoots to share production costs and audience reach.</span></li>
-            <li className="flex items-start"><span className="text-[#d4af37] mr-3 mt-0.5">✦</span><span>Secure features in premium digital publications (e.g., Vogue India, Harper's Bazaar).</span></li>
-          </ul>
-        </div>
-      </div>
+  <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="space-y-16">
+    <motion.h1 variants={itemVariants} className="font-serif text-4xl md:text-6xl leading-tight">
+      Phase 3: B2B Network <br className="hidden md:block"/>Integration
+    </motion.h1>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+      <PhaseCard 
+        number="01"
+        title="The Planner Pitch Deck"
+        description="Design of a visually striking, data-backed presentation aimed directly at top-tier wedding planners and boutique hotel coordinators."
+        details={[
+          "Design a 10-page editorial PDF highlighting your unique value proposition to planners.",
+          "Outline clear, mutually beneficial commission and partnership structures for B2B referrals.",
+          "Draft personalized outreach scripts targeting the top 20 luxury wedding planners in India."
+        ]}
+      />
+      <PhaseCard 
+        number="02"
+        title="Strategic Collaborations"
+        description="Facilitating conceptual shoots alongside established sustainable Indian fashion labels and heritage jewelry brands to tap into their HNW audiences."
+        details={[
+          "Identify 5-7 non-competing luxury brands (jewelry, couture) for cross-promotion.",
+          "Pitch and execute joint editorial shoots to share production costs and audience reach.",
+          "Secure features in premium digital publications (e.g., Vogue India, Harper's Bazaar)."
+        ]}
+      />
     </div>
-  </div>
+  </motion.div>
+);
+
+const TimelineItem = ({ month, title, desc, details }: { month: string, title: string, desc: string, details: string[] }) => (
+  <motion.div variants={itemVariants} className="relative pl-10 md:pl-16 pb-16 border-l border-white/10 last:border-l-transparent last:pb-0">
+    <div className="absolute w-4 h-4 rounded-full border border-[#d4af37] bg-[#0a0a0a] -left-[8.5px] top-1">
+      <div className="absolute inset-[3px] bg-[#d4af37] rounded-full opacity-50"></div>
+    </div>
+    <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">{month}</div>
+    <h3 className="font-serif text-3xl mb-4">{title}</h3>
+    <p className="text-gray-400 leading-relaxed font-light mb-8 text-lg">
+      {desc}
+    </p>
+    <div className="pl-6 border-l border-[#d4af37]/30">
+      <h4 className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-6">My Role & Execution</h4>
+      <ul className="space-y-4 text-gray-300 font-light text-sm md:text-base">
+        {details.map((detail, idx) => (
+          <li key={idx} className="flex items-start">
+            <span className="text-[#d4af37] mr-4 mt-1 text-xs">✦</span>
+            <span className="leading-relaxed">{detail}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </motion.div>
+);
+
+const References = () => (
+  <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="space-y-16">
+    <motion.h1 variants={itemVariants} className="font-serif text-4xl md:text-6xl leading-tight">
+      Visual References <br className="hidden md:block"/>& Content Direction
+    </motion.h1>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+      <motion.div variants={itemVariants} className="group relative aspect-[4/5] overflow-hidden border border-white/10">
+        <div className="absolute inset-0 bg-[url('https://i.pinimg.com/736x/2b/54/a3/2b54a3e5e967cfefb1df3274e85cafad.jpg')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 opacity-60 mix-blend-luminosity"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 p-8 w-full">
+          <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-3">Direction 01</div>
+          <h3 className="font-serif text-2xl mb-2 text-white">Macro Textures</h3>
+          <p className="text-gray-400 text-sm font-light">Focusing on raw skin finish, flawless blending, and extreme high-resolution product details.</p>
+        </div>
+      </motion.div>
+      <motion.div variants={itemVariants} className="group relative aspect-[4/5] overflow-hidden border border-white/10">
+        <div className="absolute inset-0 bg-[url('https://i.pinimg.com/736x/a8/dd/e0/a8dde0b1a5bd8ad581e3aa172e3fe3da.jpg')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 opacity-60 mix-blend-luminosity"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 p-8 w-full">
+          <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-3">Direction 02</div>
+          <h3 className="font-serif text-2xl mb-2 text-white">Cinematic BTS</h3>
+          <p className="text-gray-400 text-sm font-light">Documentary-style preparation shots capturing the luxury experience of being in your chair.</p>
+        </div>
+      </motion.div>
+      <motion.div variants={itemVariants} className="group relative aspect-[4/5] overflow-hidden border border-white/10">
+        <div className="absolute inset-0 bg-[url('https://i.pinimg.com/736x/9a/61/87/9a6187a060aa2917812519ec482c2187.jpg')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 opacity-60 mix-blend-luminosity"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 p-8 w-full">
+          <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-3">Direction 03</div>
+          <h3 className="font-serif text-2xl mb-2 text-white">Editorial Portraits</h3>
+          <p className="text-gray-400 text-sm font-light">Vogue-inspired studio lighting for the final bridal look, moving away from standard ring-light selfies.</p>
+        </div>
+      </motion.div>
+    </div>
+  </motion.div>
 );
 
 const Timeline = () => (
-  <div className="space-y-12 max-w-4xl mx-auto">
-    <h1 className="font-serif text-3xl md:text-5xl leading-tight text-center">
-      Execution & Timeline
-    </h1>
-    <p className="text-center text-gray-400 max-w-2xl mx-auto font-light">
-      A structured 3-month rollout. Below is the exact execution plan and how I will personally drive each phase to ensure a flawless market entry.
-    </p>
-    <div className="relative border-l border-white/10 ml-4 md:ml-8 space-y-12 pb-8 mt-12">
-      
-      <div className="relative pl-8 md:pl-12">
-        <div className="absolute w-3 h-3 bg-[#d4af37] rounded-full -left-[6.5px] top-2 shadow-[0_0_10px_rgba(212,175,55,0.5)]"></div>
-        <div className="text-[#d4af37] text-sm tracking-widest uppercase mb-2">Month 1</div>
-        <h3 className="font-serif text-2xl mb-3">Preparation & Strategy</h3>
-        <p className="text-gray-400 leading-relaxed font-light mb-6">
-          Laying the foundation for the Indian market.
-        </p>
-        <div className="bg-[#1a1a1a] p-8 border border-white/5">
-          <h4 className="text-[#d4af37] text-xs tracking-[0.2em] uppercase mb-4">My Role & Execution</h4>
-          <ul className="space-y-3 text-gray-300 font-light">
-            <li className="flex items-start">
-              <span className="text-[#d4af37] mr-3 mt-1">✦</span>
-              <span>Conduct a comprehensive visual audit of your current portfolio to identify gaps for the Indian HNW audience.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#d4af37] mr-3 mt-1">✦</span>
-              <span>Architect the new website framework, user journey, and lead-vetting logic.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#d4af37] mr-3 mt-1">✦</span>
-              <span>Develop localized brand guidelines and high-converting copywriting.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="relative pl-8 md:pl-12">
-        <div className="absolute w-3 h-3 bg-[#d4af37] rounded-full -left-[6.5px] top-2 shadow-[0_0_10px_rgba(212,175,55,0.5)]"></div>
-        <div className="text-[#d4af37] text-sm tracking-widest uppercase mb-2">Month 2</div>
-        <h3 className="font-serif text-2xl mb-3">Production & Direction</h3>
-        <p className="text-gray-400 leading-relaxed font-light mb-6">
-          Creating the "Editorial Realism" visual assets.
-        </p>
-        <div className="bg-[#1a1a1a] p-8 border border-white/5">
-          <h4 className="text-[#d4af37] text-xs tracking-[0.2em] uppercase mb-4">My Role & Execution</h4>
-          <ul className="space-y-3 text-gray-300 font-light">
-            <li className="flex items-start">
-              <span className="text-[#d4af37] mr-3 mt-1">✦</span>
-              <span>Creative-direct the localized conceptual shoots from moodboard to final edit.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#d4af37] mr-3 mt-1">✦</span>
-              <span>Source and coordinate with Indian models, high-end photographers, and videographers.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#d4af37] mr-3 mt-1">✦</span>
-              <span>Oversee the "Cinematic Portraiture" lighting setups on set to ensure the output matches the required luxury standard.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="relative pl-8 md:pl-12">
-        <div className="absolute w-3 h-3 bg-[#d4af37] rounded-full -left-[6.5px] top-2 shadow-[0_0_10px_rgba(212,175,55,0.5)]"></div>
-        <div className="text-[#d4af37] text-sm tracking-widest uppercase mb-2">Month 3</div>
-        <h3 className="font-serif text-2xl mb-3">Launch & Network Integration</h3>
-        <p className="text-gray-400 leading-relaxed font-light mb-6">
-          Going live and initiating B2B outreach ahead of the winter wedding season.
-        </p>
-        <div className="bg-[#1a1a1a] p-8 border border-white/5">
-          <h4 className="text-[#d4af37] text-xs tracking-[0.2em] uppercase mb-4">My Role & Execution</h4>
-          <ul className="space-y-3 text-gray-300 font-light">
-            <li className="flex items-start">
-              <span className="text-[#d4af37] mr-3 mt-1">✦</span>
-              <span>Deploy the new digital ecosystem (website and AI lead-vetting system).</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#d4af37] mr-3 mt-1">✦</span>
-              <span>Design and finalize the B2B Planner Pitch Deck with the newly shot assets.</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-[#d4af37] mr-3 mt-1">✦</span>
-              <span>Facilitate introductions and pitch collaborations directly to top-tier Indian wedding planners and heritage brands.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
+  <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="max-w-4xl mx-auto">
+    <motion.div variants={itemVariants} className="text-center mb-20">
+      <h1 className="font-serif text-4xl md:text-6xl leading-tight mb-6">
+        Execution & Timeline
+      </h1>
+      <p className="text-gray-400 max-w-2xl mx-auto font-light text-lg">
+        A structured 3-month rollout. Below is the exact execution plan and how I will personally drive each phase to ensure a flawless market entry.
+      </p>
+    </motion.div>
+    
+    <div className="ml-4 md:ml-8">
+      <TimelineItem 
+        month="Month 1"
+        title="Preparation & Strategy"
+        desc="Laying the foundation for the Indian market."
+        details={[
+          "Conduct a comprehensive visual audit of your current portfolio to identify gaps for the Indian HNW audience.",
+          "Architect the new website framework, user journey, and lead-vetting logic.",
+          "Develop localized brand guidelines and high-converting copywriting."
+        ]}
+      />
+      <TimelineItem 
+        month="Month 2"
+        title="Production & Direction"
+        desc="Creating the 'Editorial Realism' visual assets."
+        details={[
+          "Creative-direct the localized conceptual shoots from moodboard to final edit.",
+          "Source and coordinate with Indian models, high-end photographers, and videographers.",
+          "Oversee the 'Cinematic Portraiture' lighting setups on set to ensure the output matches the required luxury standard."
+        ]}
+      />
+      <TimelineItem 
+        month="Month 3"
+        title="Launch & Network Integration"
+        desc="Going live and initiating B2B outreach ahead of the winter wedding season."
+        details={[
+          "Deploy the new digital ecosystem (website and AI lead-vetting system).",
+          "Design and finalize the B2B Planner Pitch Deck with the newly shot assets.",
+          "Facilitate introductions and pitch collaborations directly to top-tier Indian wedding planners and heritage brands."
+        ]}
+      />
     </div>
-  </div>
+  </motion.div>
 );
 
 const Contact = () => (
-  <div className="space-y-12 max-w-3xl mx-auto text-center">
-    <h2 className="text-[#d4af37] text-sm tracking-[0.3em] uppercase">Next Steps</h2>
-    <h1 className="font-serif text-4xl md:text-6xl leading-tight">
-      Initiate the Strategy.
-    </h1>
-    <p className="text-lg text-gray-400 font-light mb-12">
+  <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="max-w-4xl mx-auto text-center">
+    <motion.h2 variants={itemVariants} className="text-[#d4af37] text-xs tracking-[0.4em] uppercase mb-6">Next Steps</motion.h2>
+    <motion.h1 variants={itemVariants} className="font-serif text-5xl md:text-7xl leading-tight mb-8">
+      Initiate the <span className="italic">Strategy.</span>
+    </motion.h1>
+    <motion.p variants={itemVariants} className="text-xl text-gray-400 font-light mb-20 max-w-2xl mx-auto">
       Ready to architect the future of your brand in the Indian luxury market? Let's discuss the execution.
-    </p>
+    </motion.p>
     
-    <div className="bg-[#1a1a1a] p-12 border border-white/5 inline-block w-full md:w-auto min-w-[320px] text-left">
-      <div className="space-y-8">
-        <div>
-          <h4 className="text-[#d4af37] text-xs tracking-[0.2em] uppercase mb-2">Email</h4>
-          <a href="mailto:abhishek.gujar1202@gmail.com" className="text-xl font-light hover:text-[#d4af37] transition-colors block">
-            abhishek.gujar1202@gmail.com
-          </a>
-        </div>
-        <div>
-          <h4 className="text-[#d4af37] text-xs tracking-[0.2em] uppercase mb-2">Direct Line</h4>
-          <a href="tel:+917400310440" className="text-xl font-light hover:text-[#d4af37] transition-colors block">
-            7400310440
-          </a>
-        </div>
-        <div>
-          <h4 className="text-[#d4af37] text-xs tracking-[0.2em] uppercase mb-2">Portfolio</h4>
-          <a href="https://www.icreatepixels.in" target="_blank" rel="noopener noreferrer" className="text-xl font-light hover:text-[#d4af37] transition-colors block">
-            www.icreatepixels.in
-          </a>
-        </div>
+    <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left border-y border-white/10 py-16">
+      <div className="group">
+        <h4 className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4 flex items-center gap-3">
+          <span className="w-4 h-[1px] bg-[#d4af37]"></span> Email
+        </h4>
+        <a href="mailto:abhishek.gujar1202@gmail.com" className="text-lg md:text-xl font-light text-white hover:text-[#d4af37] transition-colors duration-500 break-words">
+          abhishek.gujar1202<br/>@gmail.com
+        </a>
       </div>
-    </div>
-  </div>
+      <div className="group">
+        <h4 className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4 flex items-center gap-3">
+          <span className="w-4 h-[1px] bg-[#d4af37]"></span> Direct Line
+        </h4>
+        <a href="tel:+917400310443" className="text-lg md:text-xl font-light text-white hover:text-[#d4af37] transition-colors duration-500">
+          +91 7400 310 443
+        </a>
+      </div>
+      <div className="group">
+        <h4 className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4 flex items-center gap-3">
+          <span className="w-4 h-[1px] bg-[#d4af37]"></span> Portfolio
+        </h4>
+        <a href="https://www.icreatepixels.in" target="_blank" rel="noopener noreferrer" className="text-lg md:text-xl font-light text-white hover:text-[#d4af37] transition-colors duration-500">
+          icreatepixels.in
+        </a>
+      </div>
+    </motion.div>
+  </motion.div>
 );
 
 export default function App() {
@@ -285,40 +342,67 @@ export default function App() {
     { name: 'Phase 1', component: Phase1 },
     { name: 'Phase 2', component: Phase2 },
     { name: 'Phase 3', component: Phase3 },
+    { name: 'References', component: References },
     { name: 'Timeline', component: Timeline },
     { name: 'Contact', component: Contact },
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0a0a0a] text-[#f4f4f4] font-sans selection:bg-[#d4af37] selection:text-[#0a0a0a]">
+    <div className="min-h-screen flex flex-col bg-[#050505] text-[#f4f4f4] font-sans selection:bg-[#d4af37] selection:text-[#050505] relative overflow-hidden">
+      
+      {/* Cinematic Makeup Background */}
+      <div 
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30 mix-blend-luminosity"
+        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1512496015851-a1dc8a47159c?q=80&w=2000&auto=format&fit=crop")' }}
+      ></div>
+      
+      {/* Gradient Overlay to ensure text readability */}
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-[#050505]/60 via-[#050505]/90 to-[#050505] pointer-events-none"></div>
+
+      {/* Subtle Noise Overlay for premium texture */}
+      <div 
+        className="fixed inset-0 opacity-[0.03] pointer-events-none z-0 mix-blend-overlay" 
+        style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}
+      ></div>
+      
+      {/* Subtle background glow */}
+      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#d4af37] opacity-[0.04] blur-[120px] rounded-full pointer-events-none z-0"></div>
+
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/90 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="font-serif text-xl tracking-widest text-[#d4af37]">
-            MBN <span className="text-[#f4f4f4] text-sm mx-2 font-sans">x</span> INDIA
+      <nav className="fixed top-0 w-full z-50 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 h-24 flex items-center justify-between">
+          <div className="font-serif text-2xl tracking-widest text-white flex items-center gap-3">
+            MBN <span className="text-[#d4af37] text-sm font-sans font-light italic">x</span> INDIA
           </div>
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden lg:flex space-x-6 xl:space-x-10">
             {tabs.map((tab, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`text-sm tracking-widest uppercase transition-colors duration-300 ${
-                  activeTab === index ? 'text-[#d4af37]' : 'text-gray-400 hover:text-[#f4f4f4]'
+                className={`text-xs tracking-[0.2em] uppercase transition-all duration-500 relative py-2 ${
+                  activeTab === index ? 'text-white' : 'text-gray-500 hover:text-white'
                 }`}
               >
                 {tab.name}
+                {activeTab === index && (
+                  <motion.div 
+                    layoutId="nav-indicator"
+                    className="absolute bottom-0 left-0 right-0 h-[1px] bg-[#d4af37]"
+                    transition={{ duration: 0.6, ease: premiumEase }}
+                  />
+                )}
               </button>
             ))}
           </div>
         </div>
         {/* Mobile Tabs */}
-        <div className="md:hidden flex overflow-x-auto px-6 pb-4 space-x-6 no-scrollbar">
+        <div className="lg:hidden flex overflow-x-auto px-6 pb-4 space-x-8 no-scrollbar border-t border-white/5 pt-4">
             {tabs.map((tab, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`text-xs whitespace-nowrap tracking-widest uppercase transition-colors duration-300 ${
-                  activeTab === index ? 'text-[#d4af37]' : 'text-gray-400 hover:text-[#f4f4f4]'
+                className={`text-[10px] whitespace-nowrap tracking-[0.2em] uppercase transition-colors duration-500 ${
+                  activeTab === index ? 'text-[#d4af37]' : 'text-gray-500'
                 }`}
               >
                 {tab.name}
@@ -328,25 +412,18 @@ export default function App() {
       </nav>
 
       {/* Main Content */}
-      <main className="flex-grow pt-32 md:pt-40 pb-20 px-6 max-w-5xl mx-auto w-full flex flex-col justify-center">
+      <main className="flex-grow pt-40 md:pt-48 pb-32 px-6 md:px-12 max-w-[1400px] mx-auto w-full flex flex-col justify-center relative z-10">
         <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="w-full"
-          >
+          <motion.div key={activeTab} className="w-full">
             {React.createElement(tabs[activeTab].component)}
           </motion.div>
         </AnimatePresence>
       </main>
 
       {/* Footer */}
-      <footer className="py-8 text-center border-t border-white/10">
-        <p className="text-xs tracking-widest text-gray-500 uppercase">
-          Concept, Strategy & Execution by Abhishek Gujar
+      <footer className="py-12 text-center border-t border-white/5 relative z-10">
+        <p className="text-[10px] tracking-[0.3em] text-gray-600 uppercase">
+          Concept, Strategy & Execution by <span className="text-gray-400">Abhishek Gujar</span>
         </p>
       </footer>
     </div>
