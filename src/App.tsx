@@ -39,13 +39,18 @@ const Vision = () => (
     <motion.h2 variants={itemVariants} className="text-[#d4af37] text-xs md:text-sm tracking-[0.4em] uppercase">
       Strategic Architecture
     </motion.h2>
-    <motion.h1 variants={itemVariants} className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight">
+    <motion.h1 variants={itemVariants} className="font-serif text-4xl md:text-7xl lg:text-8xl leading-[1.1] tracking-tight">
       Entering the Indian <br className="hidden md:block" />
       <span className="italic text-white/90">Luxury Bridal</span> Market.
     </motion.h1>
-    <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-400 leading-relaxed font-light max-w-3xl">
+    <motion.p variants={itemVariants} className="text-lg md:text-2xl text-gray-400 leading-relaxed font-light max-w-3xl">
       An exclusive roadmap to transition @makeoversbyniki from a highly sought-after international artist to a dominant, culturally resonant luxury authority in India. The Indian market demands <span className="text-white">"Editorial Realism"</span>—we are moving away from traditional makeup application and toward high-end beauty engineering.
     </motion.p>
+    
+    <motion.div variants={itemVariants} className="md:hidden flex items-center gap-3 text-[#d4af37]/50 text-[10px] tracking-[0.2em] uppercase mt-8">
+      <span className="w-8 h-[1px] bg-[#d4af37]/30"></span>
+      Swipe navigation to explore phases
+    </motion.div>
     
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 mt-20 pt-12 border-t border-white/10">
       <motion.div variants={itemVariants} className="group">
@@ -70,9 +75,9 @@ const Vision = () => (
 
 const PhaseCard = ({ number, title, description, details }: { number: string, title: string, description: string, details: string[] }) => (
   <motion.div variants={itemVariants} className="flex flex-col border-t border-white/10 pt-8 hover:border-[#d4af37]/50 transition-colors duration-700 group">
-    <div className="font-serif text-5xl text-white/10 mb-6 group-hover:text-[#d4af37]/20 transition-colors duration-700">{number}</div>
-    <h3 className="font-serif text-3xl mb-6 group-hover:text-[#d4af37] transition-colors duration-700">{title}</h3>
-    <p className="text-gray-400 leading-relaxed font-light mb-12 text-lg flex-grow">
+    <div className="font-serif text-4xl md:text-5xl text-white/10 mb-6 group-hover:text-[#d4af37]/20 transition-colors duration-700">{number}</div>
+    <h3 className="font-serif text-2xl md:text-3xl mb-6 group-hover:text-[#d4af37] transition-colors duration-700">{title}</h3>
+    <p className="text-gray-400 leading-relaxed font-light mb-12 text-base md:text-lg flex-grow">
       {description}
     </p>
     <div className="pl-6 border-l border-[#d4af37]/30">
@@ -195,8 +200,8 @@ const TimelineItem = ({ month, title, desc, details }: { month: string, title: s
       <div className="absolute inset-[3px] bg-[#d4af37] rounded-full opacity-50"></div>
     </div>
     <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">{month}</div>
-    <h3 className="font-serif text-3xl mb-4">{title}</h3>
-    <p className="text-gray-400 leading-relaxed font-light mb-8 text-lg">
+    <h3 className="font-serif text-2xl md:text-3xl mb-4">{title}</h3>
+    <p className="text-gray-400 leading-relaxed font-light mb-8 text-base md:text-lg">
       {desc}
     </p>
     <div className="pl-6 border-l border-[#d4af37]/30">
@@ -219,33 +224,66 @@ const References = () => (
       Visual References <br className="hidden md:block"/>& Content Direction
     </motion.h1>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-      <motion.div variants={itemVariants} className="group relative aspect-[4/5] overflow-hidden border border-white/10">
-        <div className="absolute inset-0 bg-[url('https://i.pinimg.com/736x/2b/54/a3/2b54a3e5e967cfefb1df3274e85cafad.jpg')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 opacity-60 mix-blend-luminosity"></div>
+      <motion.a 
+        href="https://in.pinterest.com/pin/4602819634414710016/"
+        target="_blank"
+        rel="noopener noreferrer"
+        variants={itemVariants} 
+        className="group relative aspect-[4/5] overflow-hidden border border-white/10 block"
+      >
+        <img 
+          src="https://i.pinimg.com/736x/2b/54/a3/2b54a3e5e967cfefb1df3274e85cafad.jpg" 
+          alt="Macro Textures Reference"
+          referrerPolicy="no-referrer"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60 mix-blend-luminosity"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 p-8 w-full">
-          <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-3">Direction 01</div>
-          <h3 className="font-serif text-2xl mb-2 text-white">Macro Textures</h3>
-          <p className="text-gray-400 text-sm font-light">Focusing on raw skin finish, flawless blending, and extreme high-resolution product details.</p>
+        <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full">
+          <div className="text-[#d4af37] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-2 md:mb-3">Direction 01</div>
+          <h3 className="font-serif text-xl md:text-2xl mb-2 text-white">Macro Textures</h3>
+          <p className="text-gray-400 text-xs md:text-sm font-light">Focusing on raw skin finish, flawless blending, and extreme high-resolution product details.</p>
         </div>
-      </motion.div>
-      <motion.div variants={itemVariants} className="group relative aspect-[4/5] overflow-hidden border border-white/10">
-        <div className="absolute inset-0 bg-[url('https://i.pinimg.com/736x/a8/dd/e0/a8dde0b1a5bd8ad581e3aa172e3fe3da.jpg')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 opacity-60 mix-blend-luminosity"></div>
+      </motion.a>
+      <motion.a 
+        href="https://in.pinterest.com/pin/295337688087417053/"
+        target="_blank"
+        rel="noopener noreferrer"
+        variants={itemVariants} 
+        className="group relative aspect-[4/5] overflow-hidden border border-white/10 block"
+      >
+        <img 
+          src="https://i.pinimg.com/736x/a8/dd/e0/a8dde0b1a5bd8ad581e3aa172e3fe3da.jpg" 
+          alt="Cinematic BTS Reference"
+          referrerPolicy="no-referrer"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60 mix-blend-luminosity"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 p-8 w-full">
-          <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-3">Direction 02</div>
-          <h3 className="font-serif text-2xl mb-2 text-white">Cinematic BTS</h3>
-          <p className="text-gray-400 text-sm font-light">Documentary-style preparation shots capturing the luxury experience of being in your chair.</p>
+        <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full">
+          <div className="text-[#d4af37] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-2 md:mb-3">Direction 02</div>
+          <h3 className="font-serif text-xl md:text-2xl mb-2 text-white">Cinematic BTS</h3>
+          <p className="text-gray-400 text-xs md:text-sm font-light">Documentary-style preparation shots capturing the luxury experience of being in your chair.</p>
         </div>
-      </motion.div>
-      <motion.div variants={itemVariants} className="group relative aspect-[4/5] overflow-hidden border border-white/10">
-        <div className="absolute inset-0 bg-[url('https://i.pinimg.com/736x/9a/61/87/9a6187a060aa2917812519ec482c2187.jpg')] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105 opacity-60 mix-blend-luminosity"></div>
+      </motion.a>
+      <motion.a 
+        href="https://in.pinterest.com/pin/410460953604828158/"
+        target="_blank"
+        rel="noopener noreferrer"
+        variants={itemVariants} 
+        className="group relative aspect-[4/5] overflow-hidden border border-white/10 block"
+      >
+        <img 
+          src="https://i.pinimg.com/736x/9a/61/87/9a6187a060aa2917812519ec482c2187.jpg" 
+          alt="Editorial Portraits Reference"
+          referrerPolicy="no-referrer"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60 mix-blend-luminosity"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 p-8 w-full">
-          <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-3">Direction 03</div>
-          <h3 className="font-serif text-2xl mb-2 text-white">Editorial Portraits</h3>
-          <p className="text-gray-400 text-sm font-light">Vogue-inspired studio lighting for the final bridal look, moving away from standard ring-light selfies.</p>
+        <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full">
+          <div className="text-[#d4af37] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-2 md:mb-3">Direction 03</div>
+          <h3 className="font-serif text-xl md:text-2xl mb-2 text-white">Editorial Portraits</h3>
+          <p className="text-gray-400 text-xs md:text-sm font-light">Vogue-inspired studio lighting for the final bridal look, moving away from standard ring-light selfies.</p>
         </div>
-      </motion.div>
+      </motion.a>
     </div>
   </motion.div>
 );
@@ -299,10 +337,10 @@ const Timeline = () => (
 const Contact = () => (
   <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="max-w-4xl mx-auto text-center">
     <motion.h2 variants={itemVariants} className="text-[#d4af37] text-xs tracking-[0.4em] uppercase mb-6">Next Steps</motion.h2>
-    <motion.h1 variants={itemVariants} className="font-serif text-5xl md:text-7xl leading-tight mb-8">
+    <motion.h1 variants={itemVariants} className="font-serif text-4xl md:text-7xl leading-tight mb-8">
       Initiate the <span className="italic">Strategy.</span>
     </motion.h1>
-    <motion.p variants={itemVariants} className="text-xl text-gray-400 font-light mb-20 max-w-2xl mx-auto">
+    <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-400 font-light mb-16 md:mb-20 max-w-2xl mx-auto">
       Ready to architect the future of your brand in the Indian luxury market? Let's discuss the execution.
     </motion.p>
     
@@ -396,18 +434,22 @@ export default function App() {
           </div>
         </div>
         {/* Mobile Tabs */}
-        <div className="lg:hidden flex overflow-x-auto px-6 pb-4 space-x-8 no-scrollbar border-t border-white/5 pt-4">
-            {tabs.map((tab, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveTab(index)}
-                className={`text-[10px] whitespace-nowrap tracking-[0.2em] uppercase transition-colors duration-500 ${
-                  activeTab === index ? 'text-[#d4af37]' : 'text-gray-500'
-                }`}
-              >
-                {tab.name}
-              </button>
-            ))}
+        <div className="lg:hidden relative">
+          <div className="flex overflow-x-auto px-6 pb-4 space-x-8 no-scrollbar border-t border-white/5 pt-4 relative z-10">
+              {tabs.map((tab, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveTab(index)}
+                  className={`text-[10px] whitespace-nowrap tracking-[0.2em] uppercase transition-colors duration-500 ${
+                    activeTab === index ? 'text-[#d4af37]' : 'text-gray-500'
+                  }`}
+                >
+                  {tab.name}
+                </button>
+              ))}
+          </div>
+          {/* Subtle gradient to indicate scrollability */}
+          <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[#050505] to-transparent pointer-events-none z-20"></div>
         </div>
       </nav>
 
