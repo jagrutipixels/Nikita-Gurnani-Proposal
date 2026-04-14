@@ -47,11 +47,6 @@ const Vision = () => (
       An exclusive roadmap to transition @makeoversbyniki from a highly sought-after international artist to a dominant, culturally resonant luxury authority in India. The Indian market demands <span className="text-white">"Editorial Realism"</span>—we are moving away from traditional makeup application and toward high-end beauty engineering.
     </motion.p>
     
-    <motion.div variants={itemVariants} className="md:hidden flex items-center gap-3 text-[#d4af37]/50 text-[10px] tracking-[0.2em] uppercase mt-8">
-      <span className="w-8 h-[1px] bg-[#d4af37]/30"></span>
-      Swipe navigation to explore phases
-    </motion.div>
-    
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 mt-20 pt-12 border-t border-white/10">
       <motion.div variants={itemVariants} className="group">
         <h3 className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-6 flex items-center gap-4">
@@ -334,6 +329,87 @@ const Timeline = () => (
   </motion.div>
 );
 
+const Investment = () => (
+  <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="max-w-5xl mx-auto">
+    <motion.div variants={itemVariants} className="text-center mb-16 md:mb-20">
+      <h2 className="text-[#d4af37] text-xs tracking-[0.4em] uppercase mb-6">Financial Architecture</h2>
+      <h1 className="font-serif text-4xl md:text-6xl leading-tight mb-6">
+        Project <span className="italic">Investment.</span>
+      </h1>
+      <p className="text-gray-400 max-w-2xl mx-auto font-light text-lg">
+        A transparent, scalable breakdown of the capital required. This structure is designed to minimize upfront risk while ensuring premium execution across all phases.
+      </p>
+    </motion.div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <motion.div variants={itemVariants} className="border border-white/10 p-8 hover:border-[#d4af37]/50 transition-colors duration-700 flex flex-col group">
+        <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">Phase 01</div>
+        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors duration-700">Content Creation</h3>
+        <p className="text-gray-400 font-light text-sm mb-8 flex-grow">Monthly creative direction, pre-production planning, on-set art direction, and post-production oversight for social assets.</p>
+        <div className="text-3xl font-serif text-white">₹30,000 <span className="text-sm text-gray-500 font-sans font-light">/ month</span></div>
+      </motion.div>
+      
+      <motion.div variants={itemVariants} className="border border-white/10 p-8 hover:border-[#d4af37]/50 transition-colors duration-700 flex flex-col group">
+        <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">Phase 02</div>
+        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors duration-700">Digital Ecosystem</h3>
+        <p className="text-gray-400 font-light text-sm mb-8 flex-grow">Custom UI/UX design, full development of the bespoke portfolio website, lead-vetting system, and 2 months of dedicated maintenance.</p>
+        <div className="text-3xl font-serif text-white">₹35,000 <span className="text-sm text-gray-500 font-sans font-light">flat</span></div>
+      </motion.div>
+
+      <motion.div variants={itemVariants} className="border border-white/10 p-8 hover:border-[#d4af37]/50 transition-colors duration-700 flex flex-col group">
+        <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">Phase 03</div>
+        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors duration-700">B2B Integration</h3>
+        <p className="text-gray-400 font-light text-sm mb-8 flex-grow">Strategic B2B outreach design. Custom planner pitch decks billed per deck, with outreach execution and collaborations billed at actuals.</p>
+        <div className="text-3xl font-serif text-white">₹2,000 <span className="text-sm text-gray-500 font-sans font-light">/ deck</span></div>
+      </motion.div>
+    </div>
+
+    <motion.div variants={itemVariants} className="border-t border-white/10 pt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="text-center md:text-left">
+          <h4 className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">Engagement Model</h4>
+          <h3 className="text-3xl md:text-4xl font-serif text-white mb-6 leading-tight">Scalable & <br/>Performance-Driven</h3>
+          <p className="text-gray-400 font-light text-sm max-w-md mx-auto md:mx-0 mb-4">
+            This revised structure transitions from a heavy upfront agency fee to a leaner, retainer-based model. It ensures you only pay for active creation and tangible assets.
+          </p>
+          <p className="text-gray-500 font-light text-xs max-w-md mx-auto md:mx-0">
+            *Hard costs for shoot production (studio rental, models, equipment) and B2B event actuals are billed separately.
+          </p>
+        </div>
+        
+        <div className="bg-[#0a0a0a] border border-white/5 p-8 md:p-10">
+          <h4 className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-8 flex items-center gap-3">
+            <span className="w-6 h-[1px] bg-[#d4af37]"></span> Payment Terms
+          </h4>
+          <div className="space-y-6">
+            <div className="border-b border-white/5 pb-6">
+              <div className="flex justify-between items-end mb-2">
+                <span className="text-gray-300 font-light text-lg">Digital Ecosystem Advance</span>
+                <span className="text-white font-serif text-2xl">60%</span>
+              </div>
+              <p className="text-gray-500 text-sm font-light">₹21,000 required to initiate website development. Remaining 40% (₹14,000) due prior to launch.</p>
+            </div>
+            <div className="border-b border-white/5 pb-6">
+              <div className="flex justify-between items-end mb-2">
+                <span className="text-gray-300 font-light text-lg">Content Retainer</span>
+                <span className="text-white font-serif text-2xl">Monthly</span>
+              </div>
+              <p className="text-gray-500 text-sm font-light">₹30,000 payable at the start of each month for ongoing content creation and direction.</p>
+            </div>
+            <div>
+              <div className="flex justify-between items-end mb-2">
+                <span className="text-gray-300 font-light text-lg">B2B Assets</span>
+                <span className="text-white font-serif text-2xl">On Demand</span>
+              </div>
+              <p className="text-gray-500 text-sm font-light">₹2,000 per pitch deck, billed upon approval. Outreach execution billed as per actuals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  </motion.div>
+);
+
 const Contact = () => (
   <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="max-w-4xl mx-auto text-center">
     <motion.h2 variants={itemVariants} className="text-[#d4af37] text-xs tracking-[0.4em] uppercase mb-6">Next Steps</motion.h2>
@@ -375,6 +451,7 @@ const Contact = () => (
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const tabs = [
     { name: 'The Vision', component: Vision },
     { name: 'Phase 1', component: Phase1 },
@@ -382,6 +459,7 @@ export default function App() {
     { name: 'Phase 3', component: Phase3 },
     { name: 'References', component: References },
     { name: 'Timeline', component: Timeline },
+    { name: 'Investment', component: Investment },
     { name: 'Contact', component: Contact },
   ];
 
@@ -432,26 +510,75 @@ export default function App() {
               </button>
             ))}
           </div>
-        </div>
-        {/* Mobile Tabs */}
-        <div className="lg:hidden relative">
-          <div className="flex overflow-x-auto px-6 pb-4 space-x-8 no-scrollbar border-t border-white/5 pt-4 relative z-10">
-              {tabs.map((tab, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveTab(index)}
-                  className={`text-[10px] whitespace-nowrap tracking-[0.2em] uppercase transition-colors duration-500 ${
-                    activeTab === index ? 'text-[#d4af37]' : 'text-gray-500'
-                  }`}
-                >
-                  {tab.name}
-                </button>
-              ))}
+          {/* Mobile Menu Toggle */}
+          <div className="lg:hidden flex items-center">
+            <button 
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="text-white p-2 -mr-2"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+                <line x1="4" y1="6" x2="20" y2="6"></line>
+                <line x1="4" y1="18" x2="20" y2="18"></line>
+              </svg>
+            </button>
           </div>
-          {/* Subtle gradient to indicate scrollability */}
-          <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[#050505] to-transparent pointer-events-none z-20"></div>
         </div>
       </nav>
+
+      {/* Mobile Side Drawer */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <>
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="fixed inset-0 bg-[#050505]/80 backdrop-blur-sm z-[60] lg:hidden"
+            />
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'tween', duration: 0.4, ease: premiumEase }}
+              className="fixed top-0 right-0 bottom-0 w-[80%] max-w-sm bg-[#0a0a0a] border-l border-white/10 z-[70] lg:hidden flex flex-col pt-24 px-8 shadow-2xl"
+            >
+              <button 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="absolute top-8 right-6 text-white/50 hover:text-white p-2"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+              <div className="flex flex-col space-y-8 mt-4">
+                {tabs.map((tab, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setActiveTab(index);
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className={`text-left text-xs tracking-[0.3em] uppercase transition-colors duration-500 ${
+                      activeTab === index ? 'text-[#d4af37]' : 'text-gray-400 hover:text-white'
+                    }`}
+                  >
+                    {tab.name}
+                  </button>
+                ))}
+              </div>
+              
+              <div className="mt-auto mb-12">
+                <div className="w-8 h-[1px] bg-[#d4af37]/30 mb-6"></div>
+                <div className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase mb-2">MBN x INDIA</div>
+                <div className="text-gray-500 text-[10px] tracking-[0.2em] uppercase">Strategic Architecture</div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
 
       {/* Main Content */}
       <main className="flex-grow pt-40 md:pt-48 pb-32 px-6 md:px-12 max-w-[1400px] mx-auto w-full flex flex-col justify-center relative z-10">
