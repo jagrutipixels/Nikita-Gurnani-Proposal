@@ -520,21 +520,21 @@ const Investment = () => (
         <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">The Luxury Brand Plan</div>
         <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors duration-700">Brand Building</h3>
         <p className="text-gray-400 font-light text-sm mb-8 flex-grow">A complete plan to build you into a recognized luxury brand. Includes 2 shoot days, high-end content creation, social media ads, and personal brand management.</p>
-        <div className="text-3xl font-serif text-white">₹40,000 <span className="text-sm text-gray-500 font-sans font-light">/ month</span></div>
+        <div className="text-3xl font-serif text-white">₹44,000 <span className="text-sm text-gray-500 font-sans font-light">/ month</span></div>
       </motion.div>
       
       <motion.div variants={itemVariants} className="border border-white/10 p-8 hover:border-[#d4af37]/50 transition-colors duration-700 flex flex-col group">
         <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">Website Setup</div>
         <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors duration-700">One-Time Setup</h3>
         <p className="text-gray-400 font-light text-sm mb-8 flex-grow">A complete professional website with search engine setup so clients can find you easily.</p>
-        <div className="text-3xl font-serif text-white">₹35,000 <span className="text-sm text-gray-500 font-sans font-light">one-time</span></div>
+        <div className="text-3xl font-serif text-white">₹38,500 <span className="text-sm text-gray-500 font-sans font-light">one-time</span></div>
       </motion.div>
 
       <motion.div variants={itemVariants} className="border border-white/10 p-8 hover:border-[#d4af37]/50 transition-colors duration-700 flex flex-col group">
         <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">Planner Connections</div>
         <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors duration-700">Portfolio Catalog</h3>
         <p className="text-gray-400 font-light text-sm mb-8 flex-grow">A professional digital catalog to share with top wedding planners to get more referrals.</p>
-        <div className="text-3xl font-serif text-white">₹2,000 <span className="text-sm text-gray-500 font-sans font-light">/ catalog</span></div>
+        <div className="text-3xl font-serif text-white">₹2,200 <span className="text-sm text-gray-500 font-sans font-light">/ catalog</span></div>
       </motion.div>
     </div>
 
@@ -678,28 +678,28 @@ const Investment = () => (
             <div className="border-b border-white/5 pb-6">
               <div className="flex justify-between items-end mb-2">
                 <span className="text-gray-300 font-light text-lg">Monthly Brand Booking (60% Advance)</span>
-                <span className="text-white font-serif text-2xl">₹24,000</span>
+                <span className="text-white font-serif text-2xl">₹26,400</span>
               </div>
-              <p className="text-gray-500 text-sm font-light italic">Required to lock-in shoot dates and begin brand planning (Total: ₹40k).</p>
+              <p className="text-gray-500 text-sm font-light italic">Required to lock-in shoot dates and begin brand planning (Total: ₹44k).</p>
             </div>
             <div className="border-b border-white/5 pb-6">
               <div className="flex justify-between items-end mb-2">
                 <span className="text-gray-300 font-light text-lg">Digital Setup (60% Advance)</span>
-                <span className="text-white font-serif text-2xl">₹21,000</span>
+                <span className="text-white font-serif text-2xl">₹23,100</span>
               </div>
-              <p className="text-gray-500 text-sm font-light italic">Required to start website launch and search setup (Total: ₹35k).</p>
+              <p className="text-gray-500 text-sm font-light italic">Required to start website launch and search setup (Total: ₹38.5k).</p>
             </div>
             <div className="border-b border-white/5 pb-6">
               <div className="flex justify-between items-end mb-2">
                 <span className="text-gray-300 font-light text-lg">Website Commercial Shoot (50% Advance)</span>
-                <span className="text-white font-serif text-2xl">₹17,500</span>
+                <span className="text-white font-serif text-2xl">₹19,250</span>
               </div>
-              <p className="text-gray-500 text-sm font-light italic">Optional. Required to book Savoir Studio & sync teams (Total: ~₹35k). Book 15 days prior.</p>
+              <p className="text-gray-500 text-sm font-light italic">Optional. Required to book Savoir Studio & sync teams (Total: ~₹38.5k). Book 15 days prior.</p>
             </div>
             <div className="pt-4 space-y-3">
               <div className="flex justify-between text-xs tracking-widest uppercase text-[#d4af37]">
                 <span>Optional Studio Access</span>
-                <span>₹6,000 / day</span>
+                <span>₹6,600 / day</span>
               </div>
               <div className="flex justify-between text-xs tracking-widest uppercase text-gray-400">
                 <span>Social Media Ad Spends</span>
@@ -934,7 +934,7 @@ const CommercialShoot = () => (
         <div className="space-y-4">
           <div className="flex justify-between items-end border-b border-white/10 pb-4">
             <span className="text-gray-400 uppercase tracking-widest text-xs">Estimated Cost</span>
-            <span className="text-white font-serif text-2xl">~₹35,000</span>
+            <span className="text-white font-serif text-2xl">~₹38,500</span>
           </div>
           <p className="text-gray-500 text-xs italic">Final cost may vary based on specific creative requirements.</p>
         </div>
