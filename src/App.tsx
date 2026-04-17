@@ -34,17 +34,17 @@ const Vision = () => {
   const concepts = [
     {
       title: "The 'Skin First' Look",
-      layman: "We move away from thick, heavy makeup that looks like a mask. Instead, we show skin that looks flawless but real—exactly what wealthy brides are paying lakhs for.",
+      layman: "We move away from thick, heavy makeup that looks like a mask. Instead, we show skin that looks flawless but real—exactly what high-end brides want.",
       icon: "✨"
     },
     {
       title: "Smart Targeting",
-      layman: "You don't need millions of followers. You need the RIGHT followers. We put your work in front of the families who book ₹50k+ per session without blinking.",
+      layman: "You don't need millions of followers. You need the RIGHT followers. We put your work in front of the families who value quality over cost.",
       icon: "🎯"
     },
     {
       title: "The Expert Status",
-      layman: "We stop you from being just another 'makeup girl.' We turn you into an International Beauty Consultant that luxury wedding planners respect and recommend.",
+      layman: "We stop you from being just another makeup artist. We turn you into a professional beauty expert that luxury wedding planners trust and recommend.",
       icon: "👑"
     }
   ];
@@ -62,19 +62,16 @@ const Vision = () => {
           <motion.h2 variants={itemVariants} className="text-[#d4af37] text-xs md:text-sm tracking-[0.4em] uppercase">
             Our Shared Goal
           </motion.h2>
-          <motion.h1 variants={itemVariants} className="font-serif text-5xl md:text-7xl leading-tight">
-            Making you the <br />
-            <span className="italic text-white/90 underline decoration-[#d4af37]/30 underline-offset-8">Category of One.</span>
+          <motion.h1 variants={itemVariants} className="font-serif text-5xl md:text-7xl leading-tight text-white">
+            Making you stay <br />
+            <span className="italic text-[#d4af37] underline underline-offset-8">Ahead of the rest.</span>
           </motion.h1>
           <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-400 leading-relaxed font-light">
-            In India, most makeup artists copy each other. They use the same filters and the same heavy styles. Working with us means you stop competing. We aren't just an agency; we are your <span className="text-white">Growth Partner.</span> 
+            Working with us means your brand will feel premium, matching the high standard of your work. We help you attract the right clients who value your talent.
           </motion.p>
           <motion.div variants={itemVariants} className="pt-4 flex flex-col sm:flex-row gap-4">
             <div className="inline-block border border-[#d4af37] px-6 py-3 text-[#d4af37] text-xs tracking-widest uppercase hover:bg-[#d4af37] hover:text-black transition-all duration-500 cursor-default">
-              The Luxury Pivot
-            </div>
-            <div className="inline-block bg-[#d4af37]/10 border border-[#d4af37]/30 px-6 py-3 text-white text-[10px] tracking-widest uppercase">
-              Start by April 20 for Season Readiness
+              The Luxury Shift
             </div>
           </motion.div>
         </div>
@@ -115,25 +112,25 @@ const Vision = () => {
             </div>
             <h4 className="text-white font-serif text-xl mb-4">Focus on your craft.</h4>
             <p className="text-gray-500 text-sm font-light leading-relaxed">
-              We provide the technical foundation, SEO strategy, and high-end digital assets, allowing you more time to focus on your clients and artistry.
+              We handle the website, Google search plans, and professional photos, allowing you more time to focus on your clients and artistry.
             </p>
           </div>
           <div className="text-center group">
             <div className="w-12 h-12 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:border-[#d4af37] transition-colors duration-500">
               <span className="text-white font-serif italic">02</span>
             </div>
-            <h4 className="text-white font-serif text-xl mb-4">Prioritizing Quality.</h4>
+            <h4 className="text-white font-serif text-xl mb-4">Brand Management.</h4>
             <p className="text-gray-500 text-sm font-light leading-relaxed">
-              We focus on attracting serious inquiries over vanity metrics. Our goal is to build an ecosystem that resonates with luxury-focused leads.
+              We focus on attracting serious client inquiries and building a reputation that precedes you. Our goal is to craft a premium brand that high-value clients naturally trust.
             </p>
           </div>
           <div className="text-center group">
             <div className="w-12 h-12 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:border-[#d4af37] transition-colors duration-500">
               <span className="text-white font-serif italic">03</span>
             </div>
-            <h4 className="text-white font-serif text-xl mb-4">Strategic Partner.</h4>
+            <h4 className="text-white font-serif text-xl mb-4">Guiding You.</h4>
             <p className="text-gray-400 text-sm font-light leading-relaxed italic">
-              "We view ourselves as a growth partner, working collaboratively to refine and protect your brand's premium position in the market."
+              "We act as your growth partner, working with you to protect your premium reputation and grow your business steadily."
             </p>
           </div>
         </div>
@@ -166,40 +163,40 @@ const PhaseCard = ({ number, title, description, details }: { number: string, ti
 const Phase1 = () => (
   <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="space-y-16">
     <motion.h1 variants={itemVariants} className="font-serif text-4xl md:text-6xl leading-tight">
-      Phase 1: Visual Identity <br className="hidden md:block"/>& Content Engine
+      Phase 1: Brand Strategy <br className="hidden md:block"/>& Content Production
     </motion.h1>
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16">
       <PhaseCard 
         number="01"
-        title="Pre-Production & Strategy"
-        description="Meticulous planning to ensure every shoot aligns with the 'Editorial Realism' mandate and maximizes ROI."
+        title="Brand Architecture"
+        description="Defining your luxury identity. We align your portfolio with the style of your dream bridal clients."
         details={[
-          "Moodboarding: Granular visual direction for lighting, skin finish, and wardrobe.",
-          "Technical Data: Sourcing HNW-aligned model suggestions (Casting finalized by Client).",
-          "Logistics: Client-coordinated locations and model onboarding.",
-          "Shoot Structure: 2 Dedicated Shoot Days per month to ensure a consistent, high-impact Meta-ready content flow."
+          "Style Definition: Locking in the visual mood and voice that attracts high-net-worth clients.",
+          "Client Profiling: Understanding exactly what premium brides in your area are looking for.",
+          "Visual Standards: Setting the bar for lighting, poses, and editing that screams luxury.",
+          "Goal Alignment: Ensuring every piece of content we create builds toward your brand legacy."
         ]}
       />
       <PhaseCard 
         number="02"
-        title="Cinematic Production"
-        description="We bring professional cinema cameras and lights to your space to capture assets designed for both social presence and high-converting Meta Ads."
+        title="Premium Production"
+        description="Capturing raw, expensive-looking content in your own space during two production days."
         details={[
-          "Professional Rig: Industry-standard 4K cinema cameras and lighting architecture included.",
-          "Ad Perspective: Shooting with Meta Ad formats in mind (Safe zones, hook-driven pacing).",
-          "BTS Capture: Dedicated documentary-style behind-the-scenes for high-trust story content.",
-          "Equipment: All necessary audio, stabilization, and lighting gear provided by us."
+          "Production Days: Two full days per month with professional lighting and direction.",
+          "Luxury Lighting: Using studio-grade gear to ensure flawless skin texture and depth.",
+          "Video Direction: Guided movement and storytelling for reels that stop the scroll.",
+          "On-Site Support: Full professional crew to handle all technical aspects of the shoot."
         ]}
       />
       <PhaseCard 
         number="03"
-        title="Post-Production & Distribution"
-        description="Refining the raw assets and deploying them strategically to dominate the algorithm."
+        title="Editing & Sharing"
+        description="Refining the photos and videos and sharing them strategically to get you noticed."
         details={[
-          "Color Grading: Custom LUTs applied for an expensive, high-contrast luxury finish.",
-          "Retouching: Skin pores and texture preservation (Frequency Separation).",
-          "Asset Delivery: 8 Highly Edited & Color-Graded Reels (Optimized for Social & Meta Ads).",
-          "Meta Performance: Creative assets built specifically to lower Ad CPC and increase lead quality."
+          "Color Editing: Applying high-end styles to your photos for a luxury magazine finish.",
+          "Precision: Ensuring skin looks perfect while keeping its natural texture.",
+          "Social Media Videos: Delivering 8 edited videos (Reels) ready for ads and posting.",
+          "Growing Visibility: Creating content that brings in high-quality inquiries."
         ]}
       />
     </div>
@@ -209,40 +206,40 @@ const Phase1 = () => (
 const Phase2 = () => (
   <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="space-y-16">
     <motion.h1 variants={itemVariants} className="font-serif text-4xl md:text-6xl leading-tight">
-      Phase 2: Digital Ecosystem <br className="hidden md:block"/>& Search Dominance
+      Phase 2: Your Website <br className="hidden md:block"/>& Google Presence
     </motion.h1>
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 xl:gap-16">
       <PhaseCard 
         number="01"
-        title="Technical Infrastructure"
-        description="Setting up the bones of your digital brand. We take your pre-selected design and build it to be lightning-fast and secure."
+        title="Building the Website"
+        description="Setting up your digital brand. We build your chosen design to be fast, beautiful, and secure."
         details={[
-          "UI Implementation: We build your chosen website design to work perfectly on phones and laptops.",
-          "Speed Optimization: Ensuring your site loads in under 2 seconds—wealthy clients don't wait for slow pages.",
-          "Security & Backups: Peace of mind with daily automated saves so you never lose your data.",
-          "Lead Filter: A smart form that asks exactly the right questions so only serious clients can reach you."
+          "Design Setup: We build your chosen website design to work perfectly on phones and laptops.",
+          "Fast Performance: Ensuring your site loads instantly—brides don't stay on slow websites.",
+          "Safe & Professional: Daily backups and professional security for your online home.",
+          "Smart Inquiry Form: A form that helps you find the most serious clients instantly."
         ]}
       />
       <PhaseCard 
         number="02"
-        title="Search Dominance (SEO)"
-        description="Making sure you show up first when a bride searches for 'Luxury Makeup' on Google."
+        title="Google Search Visibility"
+        description="Making sure you show up first when brides search for makeup artists on Google."
         details={[
-          "Competitor Spying: We look at exactly how your competition gets their clients and we do it better.",
-          "Keyword Mapping: Finding the exact words wealthy brides use to search so we can be their #1 result.",
-          "Backlink Building: Getting other luxury websites to link to you, which tells Google you are an authority.",
-          "Local Visibility: Setting up your business on Google Maps so local premium clients see you first."
+          "Market Research: We look at exactly how local top artists get their clients and we do it better.",
+          "The Right Terms: Finding the exact words brides use so we can put your name first.",
+          "Professional Authority: Building links and trust so Google sees you as a top expert.",
+          "Local Visibility: Setting up your business on Google Maps so local brides see you first."
         ]}
       />
       <PhaseCard 
         number="03"
-        title="Analytics: The Data Layer"
-        description="We track every click and inquiry so you know exactly which phase is bringing you the most money."
+        title="Results Tracking"
+        description="We track every visit and inquiry so you know exactly which ads are bringing you the most value."
         details={[
-          "Simple Dashboards: Easy-to-read reports that show how many new brides are visiting your site.",
-          "ROI Tracking: Seeing exactly where your inquiries come from (Google, Instagram, or Referrals).",
-          "Behavior Tracking: Seeing where people click so we can keep making the site easier to use.",
-          "Monthly Review: A plain-English summary of our progress and what we are doing next."
+          "Simple Reports: Easy-to-read dashboards that show how many new brides visit your site.",
+          "Inquiry Sources: Seeing exactly where your clients come from (Google, Instagram, or Referrals).",
+          "Easy to Use: Seeing how visitors use your site so we can keep making it better.",
+          "Plain-English Updates: A monthly review of our progress in simple language."
         ]}
       />
     </div>
@@ -252,29 +249,29 @@ const Phase2 = () => (
 const Phase3 = () => (
   <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="space-y-16">
     <motion.h1 variants={itemVariants} className="font-serif text-4xl md:text-6xl leading-tight">
-      Phase 3: B2B Network <br className="hidden md:block"/>& Authority Scaling
+      Phase 3: Brand Authority <br className="hidden md:block"/>& Elite Networking
     </motion.h1>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
       <PhaseCard 
         number="01"
-        title="The Planner Pitch System"
-        description="A highly targeted outbound strategy to secure referrals from India's top 1% of wedding planners."
+        title="Planner Relationships"
+        description="A strategic bridge to India's top luxury wedding planners and event designers."
         details={[
-          "Target Identification: Scraping and qualifying the top 50 luxury planners and venue coordinators.",
-          "Bespoke Decks: Customizing the 10-page pitch deck for each specific planner's aesthetic.",
-          "Outreach Cadence: Multi-touchpoint strategy (LinkedIn, Email, Physical luxury mailer).",
-          "Objection Handling: Pre-scripted responses for common B2B pushbacks and commission negotiations."
+          "Identify Planners: Identifying the top 50 wedding planners who handle premium weddings.",
+          "Custom Catalogs: Creating beautiful 10-page portfolio catalogs specifically for each planner.",
+          "Elite Outreach: Professionally reaching out via email and LinkedIn to introduce your brand.",
+          "Partnership Strategy: Helping you start professional conversations and handle initial meetings."
         ]}
       />
       <PhaseCard 
         number="02"
-        title="Strategic Brand Collaborations"
-        description="Borrowing equity from established luxury brands to rapidly accelerate market trust."
+        title="Strategic Collaborations"
+        description="Aligning with other high-end brands to solidify your reputation in the luxury circle."
         details={[
-          "Partner Profiling: Identifying non-competing heritage jewelry and sustainable couture brands.",
-          "Value Proposition: Pitching cost-shared editorial shoots to double the marketing budget.",
-          "PR Distribution: Submitting the collaborative shoots to digital publications (WedMeGood Luxury, Vogue).",
-          "Pivot Strategy: If Tier 1 brands decline, immediately pivot to high-growth Tier 2 boutique labels."
+          "Brand Match: Identifying jewelry and outfit brands that your premium clients love.",
+          "Shared Productions: Planning brand shoots with partners to share costs and double your reach.",
+          "Editorial PR: Submitting these shared productions to top wedding blogs and luxury lifestyle sites.",
+          "Brand Scale: Adjusting our plan based on the growth of your premium client base."
         ]}
       />
     </div>
@@ -308,12 +305,12 @@ const TimelineItem = ({ month, title, desc, details }: { month: string, title: s
 const References = () => (
   <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="max-w-6xl mx-auto">
     <motion.div variants={itemVariants} className="text-center mb-16 md:mb-20">
-      <h2 className="text-[#d4af37] text-xs tracking-[0.4em] uppercase mb-6">Visual Benchmarks</h2>
+      <h2 className="text-[#d4af37] text-xs tracking-[0.4em] uppercase mb-6">Style Guide</h2>
       <h1 className="font-serif text-4xl md:text-6xl leading-tight mb-6">
-        The <span className="italic">Standard.</span>
+        The High <span className="italic">Standard.</span>
       </h1>
       <p className="text-gray-400 max-w-2xl mx-auto font-light text-lg">
-        We don't look at local competition. We benchmark against international luxury editorial standards to ensure your brand feels expensive across every platform.
+        We match your work to the same high-quality style seen in international fashion magazines. This makes your brand feel expensive and unique.
       </p>
     </motion.div>
 
@@ -334,8 +331,8 @@ const References = () => (
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
         <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full">
           <div className="text-[#d4af37] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-2 md:mb-3">Direction 01</div>
-          <h3 className="font-serif text-xl md:text-2xl mb-2 text-white">Macro Textures</h3>
-          <p className="text-gray-400 text-xs md:text-sm font-light">Focusing on raw skin finish and high-resolution product details.</p>
+          <h3 className="font-serif text-xl md:text-2xl mb-2 text-white">Focus on Detail</h3>
+          <p className="text-gray-400 text-xs md:text-sm font-light">Showing off the perfect skin finish and fine details of your work.</p>
         </div>
       </motion.a>
       <motion.a 
@@ -354,8 +351,8 @@ const References = () => (
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
         <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full">
           <div className="text-[#d4af37] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-2 md:mb-3">Direction 02</div>
-          <h3 className="font-serif text-xl md:text-2xl mb-2 text-white">Cinematic BTS</h3>
-          <p className="text-gray-400 text-xs md:text-sm font-light">Documentary-style shots capturing the luxury experience of your process.</p>
+          <h3 className="font-serif text-xl md:text-2xl mb-2 text-white">Action Shots</h3>
+          <p className="text-gray-400 text-xs md:text-sm font-light">Behind-the-scenes videos that show the care you put into every client.</p>
         </div>
       </motion.a>
       <motion.a 
@@ -374,8 +371,8 @@ const References = () => (
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
         <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full">
           <div className="text-[#d4af37] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-2 md:mb-3">Direction 03</div>
-          <h3 className="font-serif text-xl md:text-2xl mb-2 text-white">Editorial Portraits</h3>
-          <p className="text-gray-400 text-xs md:text-sm font-light">Vogue-inspired studio lighting for the final bridal look.</p>
+          <h3 className="font-serif text-xl md:text-2xl mb-2 text-white">Final Look</h3>
+          <p className="text-gray-400 text-xs md:text-sm font-light">High-end portraits that feel like they belong on a magazine cover.</p>
         </div>
       </motion.a>
     </div>
@@ -383,22 +380,22 @@ const References = () => (
     <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-[#0a0a0a] border border-white/10 p-8 md:p-12 mb-12">
       <div>
         <h4 className="text-[#d4af37] text-[10px] tracking-[0.4em] uppercase mb-6 flex items-center gap-3">
-          <span className="w-6 h-[1px] bg-[#d4af37]"></span> The Luxury Planner's Lens
+          <span className="w-6 h-[1px] bg-[#d4af37]"></span> Professional Growth
         </h4>
         <h3 className="font-serif text-2xl md:text-3xl text-white mb-6 italic leading-relaxed">
-          "They don't want a vendor. They want a Consultant."
+          "Build a business, not just a job."
         </h3>
         <p className="text-gray-500 text-sm font-light leading-relaxed mb-6">
-          High-end wedding planners in Delhi and Mumbai look for artists who can speak 'Luxury.' By benchmarking your site against these references, we ensure that when a planner visits your profile, they immediately see you as the only compatible choice for their Billion-Rupee weddings.
+          High-end wedding planners in India want to work with people who are organized and professional. By using these styles, we make sure they see you as a top-tier partner for their biggest luxury weddings.
         </p>
         <div className="flex gap-4">
-          <div className="text-[#d4af37] font-mono text-xs uppercase tracking-widest border border-[#d4af37]/20 px-3 py-1">Zero Clutter</div>
-          <div className="text-[#d4af37] font-mono text-xs uppercase tracking-widest border border-[#d4af37]/20 px-3 py-1">High Intent</div>
+          <div className="text-[#d4af37] font-mono text-xs uppercase tracking-widest border border-[#d4af37]/20 px-3 py-1">Clean & Modern</div>
+          <div className="text-[#d4af37] font-mono text-xs uppercase tracking-widest border border-[#d4af37]/20 px-3 py-1">Premium Feel</div>
         </div>
       </div>
       <div className="flex items-center justify-center p-8 bg-white/5 border border-white/5 rounded-sm">
         <blockquote className="text-gray-400 font-light text-center italic leading-relaxed">
-          "The 'Bridge Groom' families in the Ultra-HNW segment don't scroll. They scan for excellence. If your visuals don't hit this benchmark in 2 seconds, you lose the inquiry. Our references are designed to win that 2-second scan."
+          "Billionaire families don't waste time. They want the best. If your photos don't look amazing in 2 seconds, they move on. Our styles are designed to grab their attention instantly."
         </blockquote>
       </div>
     </motion.div>
@@ -409,45 +406,45 @@ const Timeline = () => (
   <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="max-w-4xl mx-auto">
     <motion.div variants={itemVariants} className="text-center mb-20">
       <h1 className="font-serif text-4xl md:text-6xl leading-tight mb-6">
-        Granular Execution Plan
+        How We Get It Done
       </h1>
       <p className="text-gray-400 max-w-2xl mx-auto font-light text-lg">
-        A highly detailed, week-by-week roadmap ensuring absolute accountability, zero delays, and built-in contingency buffers.
+        A clear, step-by-step plan starting April 20th to make sure your brand is ready for the peak wedding season in India.
       </p>
     </motion.div>
     
     <div className="ml-4 md:ml-8">
       <TimelineItem 
-        month="Weeks 1-4"
-        title="Digital Setup & Google Prep"
-        desc="Establishing your online home and preparing it for search engines."
+        month="APR 20 - MAY 10"
+        title="Website Setup & Booking System"
+        desc="Establishing your online presence and prepping it for local search."
         details={[
-          "Week 1: Researching your competition and mapping out how we will beat them on Google.",
-          "Week 2: Building the technical side of your website and ensuring it is fast and secure.",
-          "Week 3: Setting up the 'Smart Inquiry Form' to automatically filter out budget-shoppers.",
-          "Week 4: Final checks, launch, and submitting your site to Google for indexing."
+          "Researching local competition and mapping out how we will win on Google.",
+          "Building your fast and secure website to showcase your portfolio beautifully.",
+          "Setting up the inquiry form to automatically filter out budget-shoppers.",
+          "Final checks and launching your site to be found by brides-to-be."
         ]}
       />
       <TimelineItem 
-        month="Weeks 5-8"
-        title="The First Production Cycle"
-        desc="Capturing your first set of premium photos and videos to launch the new look."
+        month="MAY 10 - MAY 31"
+        title="Photos, Videos & Ads"
+        desc="Capturing your premium photos and videos and launching your social media ads."
         details={[
-          "Week 5: Creative direction and client-side selection of models and location.",
-          "Week 6: Production Days (2 Full Days). Professional cam/lights rig deployed.",
-          "Week 7: Editing phase. 8 Meta-Optimized Reels color graded and retouched.",
-          "Week 8: Delivery of your Ad-Ready content pack and monthly posting schedule."
+          "Planning the shoot style, choosing locations, and picking the right themes.",
+          "Production Day: 2 Full Days using high-quality professional equipment.",
+          "Editing Phase: Creating high-quality social media reels and color-graded photos.",
+          "Launching your Social Media Ads to start reaching serious clients in high-net-worth circles."
         ]}
       />
       <TimelineItem 
-        month="Weeks 9-12"
-        title="Growth & Referrals"
-        desc="Using your new premium look to get referrals from top wedding planners."
+        month="JUNE & BEYOND"
+        title="Scaling & Growth"
+        desc="Using your new premium look to get referrals and steady bookings."
         details={[
-          "Week 9: Building your personal 'Portfolio Catalog' (Pitch Deck) to show to luxury planners.",
-          "Week 10: Reaching out to the Top 20 wedding planners in India to introduce your new brand.",
-          "Week 11: Meetings and follow-ups to secure you a spot on their 'Recommended Artist' lists.",
-          "Week 12: Reviewing the first 90 days of data and planning your next big growth move."
+          "Creating a professional 'Portfolio Catalog' to share with top wedding planners.",
+          "Introductions to the top 20 luxury wedding planners in your city.",
+          "Ensuring you are on the 'Recommended Artist' lists for planners.",
+          "Monthly check-ins to review your growth and plan new moves."
         ]}
       />
     </div>
@@ -457,118 +454,154 @@ const Timeline = () => (
 const Investment = () => (
   <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="max-w-5xl mx-auto">
     <motion.div variants={itemVariants} className="text-center mb-16 md:mb-20">
-      <h2 className="text-[#d4af37] text-xs tracking-[0.4em] uppercase mb-6">Financial Architecture</h2>
+      <h2 className="text-[#d4af37] text-xs tracking-[0.4em] uppercase mb-6">Investment Plans</h2>
       <h1 className="font-serif text-4xl md:text-6xl leading-tight mb-6">
-        Project <span className="italic">Investment.</span>
+        Project <span className="italic">Pricing.</span>
       </h1>
       <p className="text-gray-400 max-w-2xl mx-auto font-light text-lg">
-        A clear, low-risk structure designed to scale with your brand. No hidden fees, just pure execution.
+        A clear and simple plan designed to grow your brand. No hidden fees, just real results.
       </p>
     </motion.div>
 
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
       <motion.div variants={itemVariants} className="border border-white/10 p-8 hover:border-[#d4af37]/50 transition-colors duration-700 flex flex-col group">
-        <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">Content Assets</div>
-        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors duration-700">Monthly Retainer</h3>
-        <p className="text-gray-400 font-light text-sm mb-8 flex-grow">2 Shoot Days. 8 Color-Graded Reels. Pro Camera & Lights included. (Meta Ad Strategy Integrated). Models/Location by Client.</p>
-        <div className="text-3xl font-serif text-white">₹30,000 <span className="text-sm text-gray-500 font-sans font-light">/ month</span></div>
+        <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">The Luxury Brand Plan</div>
+        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors duration-700">Brand Building</h3>
+        <p className="text-gray-400 font-light text-sm mb-8 flex-grow">A complete plan to build you into a recognized luxury brand. Includes 2 shoot days, high-end content creation, social media ads, and personal brand management.</p>
+        <div className="text-3xl font-serif text-white">₹40,000 <span className="text-sm text-gray-500 font-sans font-light">/ month</span></div>
       </motion.div>
       
       <motion.div variants={itemVariants} className="border border-white/10 p-8 hover:border-[#d4af37]/50 transition-colors duration-700 flex flex-col group">
-        <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">Web & Systems</div>
-        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors duration-700">Tech Flat Fee</h3>
-        <p className="text-gray-400 font-light text-sm mb-8 flex-grow">Full tech build of your pre-selected UI, plus deep SEO and conversion tracking setup.</p>
+        <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">Website Setup</div>
+        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors duration-700">One-Time Setup</h3>
+        <p className="text-gray-400 font-light text-sm mb-8 flex-grow">A complete professional website with search engine setup so clients can find you easily.</p>
         <div className="text-3xl font-serif text-white">₹35,000 <span className="text-sm text-gray-500 font-sans font-light">one-time</span></div>
       </motion.div>
 
       <motion.div variants={itemVariants} className="border border-white/10 p-8 hover:border-[#d4af37]/50 transition-colors duration-700 flex flex-col group">
-        <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">B2B Assets</div>
-        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors duration-700">Pitch Deck</h3>
-        <p className="text-gray-400 font-light text-sm mb-8 flex-grow">Custom editorial catalogs to send to high-end wedding planners to get you referred.</p>
-        <div className="text-3xl font-serif text-white">₹2,000 <span className="text-sm text-gray-500 font-sans font-light">/ deck</span></div>
+        <div className="text-[#d4af37] text-xs tracking-[0.3em] uppercase mb-4">Planner Connections</div>
+        <h3 className="font-serif text-2xl mb-4 group-hover:text-[#d4af37] transition-colors duration-700">Portfolio Catalog</h3>
+        <p className="text-gray-400 font-light text-sm mb-8 flex-grow">A professional digital catalog to share with top wedding planners to get more referrals.</p>
+        <div className="text-3xl font-serif text-white">₹2,000 <span className="text-sm text-gray-500 font-sans font-light">/ catalog</span></div>
       </motion.div>
     </div>
 
     <motion.div variants={itemVariants} className="mb-20 bg-[#0a0a0a] border border-white/10 p-8 md:p-12 relative overflow-hidden">
       <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
-        <span className="font-mono text-[10vw] leading-none text-[#d4af37]">LEDGER</span>
+        <span className="font-mono text-[10vw] leading-none text-[#d4af37]">LIST</span>
       </div>
       
       <h3 className="relative z-10 text-[#d4af37] text-xs tracking-[0.4em] uppercase mb-12 text-center flex items-center justify-center gap-4">
         <span className="w-12 h-[1px] bg-[#d4af37]/30"></span> 
-        Tangible Deliverables Ledger
+        Service Details
         <span className="w-12 h-[1px] bg-[#d4af37]/30"></span>
       </h3>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-20 gap-y-12 relative z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-12 relative z-10">
         <div className="space-y-8">
           <h4 className="font-serif text-2xl border-b border-white/10 pb-4 flex items-center gap-3 italic">
-            01. Digital Infrastructure
+            01. Professional Website
           </h4>
           <ul className="space-y-6">
             <li className="group">
               <div className="flex justify-between items-center mb-1 text-sm tracking-wide">
-                <span className="text-white">Premium Portfolio Hub</span>
-                <span className="font-mono text-[10px] text-[#d4af37]">PRODUCTION READY</span>
+                <span className="text-white">Your Premium Portfolio</span>
+                <span className="font-mono text-[10px] text-[#d4af37]">READY FOR CLIENTS</span>
               </div>
-              <p className="text-gray-500 text-xs font-light leading-relaxed">High-performance deployment of your chosen UI. Fully responsive for iOS/Android devices.</p>
+              <p className="text-gray-500 text-xs font-light leading-relaxed">A modern website that works perfectly on phones and computers to show your work.</p>
             </li>
             <li className="group">
               <div className="flex justify-between items-center mb-1 text-sm tracking-wide">
-                <span className="text-white">SEO Dominance Suite</span>
-                <span className="font-mono text-[10px] text-[#d4af37]">LOCAL & NICHED</span>
+                <span className="text-white">Google Visibility</span>
+                <span className="font-mono text-[10px] text-[#d4af37]">BE FOUND</span>
               </div>
-              <p className="text-gray-500 text-xs font-light leading-relaxed">Custom Schema markup for the Indian Luxury market. Optimized for high-intent bridal keywords.</p>
+              <p className="text-gray-500 text-xs font-light leading-relaxed">Setup so that local brides can easily find you when they search for makeup artists.</p>
             </li>
             <li className="group">
               <div className="flex justify-between items-center mb-1 text-sm tracking-wide">
-                <span className="text-white">Smart Vetting Ecosystem</span>
-                <span className="font-mono text-[10px] text-[#d4af37]">LEAD FILTERING</span>
+                <span className="text-white">Smart Booking Form</span>
+                <span className="font-mono text-[10px] text-[#d4af37]">SAVING YOU TIME</span>
               </div>
-              <p className="text-gray-500 text-xs font-light leading-relaxed">Integrated inquiry forms designed to filter high-net-worth clients from budget inquiries automatically.</p>
+              <p className="text-gray-500 text-xs font-light leading-relaxed">Forms that help you identify serious, high-value clients and skip budget-shoppers.</p>
             </li>
             <li className="group">
               <div className="flex justify-between items-center mb-1 text-sm tracking-wide">
-                <span className="text-white">Ad Tracking Architecture</span>
-                <span className="font-mono text-[10px] text-[#d4af37]">PIXEL & CAPI</span>
+                <span className="text-white">Ad Tracking Setup</span>
+                <span className="font-mono text-[10px] text-[#d4af37]">SEE WHAT WORKS</span>
               </div>
-              <p className="text-gray-500 text-xs font-light leading-relaxed">Meta Pixel, CAPI, and Google Analytics setup to track every rupee spent on ads accurately.</p>
+              <p className="text-gray-500 text-xs font-light leading-relaxed">Tools to see exactly where your customers are coming from and which ads are working.</p>
             </li>
           </ul>
         </div>
 
         <div className="space-y-8">
           <h4 className="font-serif text-2xl border-b border-white/10 pb-4 flex items-center gap-3 italic">
-            02. Monthly Content Engine
+            02. Full Brand Management
           </h4>
           <ul className="space-y-6">
             <li className="group">
               <div className="flex justify-between items-center mb-1 text-sm tracking-wide">
-                <span className="text-white">8 Ad-Optimized Reels</span>
-                <span className="font-mono text-[10px] text-[#d4af37]">4K CINEMA RIG</span>
+                <span className="text-white">Brand Strategy & Positioning</span>
+                <span className="font-mono text-[10px] text-[#d4af37]">LUXURY STANDARD</span>
               </div>
-              <p className="text-gray-500 text-xs font-light leading-relaxed">Shot with safe-zones for Meta Ads. Includes hook-driven editing and professional sound design.</p>
+              <p className="text-gray-500 text-xs font-light leading-relaxed">Dedicated sessions to refine your brand voice and visual style to attract premium brides.</p>
             </li>
             <li className="group">
               <div className="flex justify-between items-center mb-1 text-sm tracking-wide">
-                <span className="text-white">Editorial Grading & Stills</span>
-                <span className="font-mono text-[10px] text-[#d4af37]">RETUCHE PRECISION</span>
+                <span className="text-white">8 Professional Reels</span>
+                <span className="font-mono text-[10px] text-[#d4af37]">HIGH QUALITY</span>
               </div>
-              <p className="text-gray-500 text-xs font-light leading-relaxed">10 Portraits with skin-pore preservation. Custom color LUTs for an expensive "Vogue" finish.</p>
+              <p className="text-gray-500 text-xs font-light leading-relaxed">Short videos designed to grab attention on social media with clear sound and editing.</p>
             </li>
             <li className="group">
               <div className="flex justify-between items-center mb-1 text-sm tracking-wide">
-                <span className="text-white">Ad-Perspective Directing</span>
-                <span className="font-mono text-[10px] text-[#d4af37]">ROI FOCUSED</span>
+                <span className="text-white">Premium Portraits & Photos</span>
+                <span className="font-mono text-[10px] text-[#d4af37]">PREMIUM FINISH</span>
               </div>
-              <p className="text-gray-500 text-xs font-light leading-relaxed">2 Days of shooting focused on high-conversion visual hooks to lower your Meta Ad costs.</p>
+              <p className="text-gray-500 text-xs font-light leading-relaxed">High-quality photos that show perfect skin and detail, looking like magazine shots.</p>
             </li>
             <li className="group">
               <div className="flex justify-between items-center mb-1 text-sm tracking-wide">
-                <span className="text-white">Account Setup & Meta Ad Strategy</span>
-                <span className="font-mono text-[10px] text-[#d4af37]">MONTH 1 FOCUS</span>
+                <span className="text-white">2 Production Days</span>
+                <span className="font-mono text-[10px] text-[#d4af37]">LOCAL</span>
               </div>
-              <p className="text-gray-500 text-xs font-light leading-relaxed">Full Meta Business Suite configuration, Ad account warm-up, lead-funnel mapping, and high-conversion target audience architecture for the first 30 days.</p>
+              <p className="text-gray-500 text-xs font-light leading-relaxed">Two dedicated days per month in your space to capture fresh, authentic content.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div className="space-y-8">
+          <h4 className="font-serif text-2xl border-b border-white/10 pb-4 flex items-center gap-3 italic">
+            03. Main Brand Shoot (Add-on)
+          </h4>
+          <ul className="space-y-6">
+            <li className="group">
+              <div className="flex justify-between items-center mb-1 text-sm tracking-wide">
+                <span className="text-white">Website Hero Video</span>
+                <span className="font-mono text-[10px] text-[#d4af37]">CORE VISUAL</span>
+              </div>
+              <p className="text-gray-500 text-xs font-light leading-relaxed">1 Main video for your home page header. Plus all raw and edited photos from the shoot.</p>
+            </li>
+            <li className="group">
+              <div className="flex justify-between items-center mb-1 text-sm tracking-wide">
+                <span className="text-white">Creative Planning</span>
+                <span className="font-mono text-[10px] text-[#d4af37]">IDEAS & STYLE</span>
+              </div>
+              <p className="text-gray-500 text-xs font-light leading-relaxed">I will plan the theme, styles, and inspiration boards. Location sourcing is included.</p>
+            </li>
+            <li className="group">
+              <div className="flex justify-between items-center mb-1 text-sm tracking-wide">
+                <span className="text-white">Photography Team</span>
+                <span className="font-mono text-[10px] text-[#d4af37]">SAVOIR STUDIO</span>
+              </div>
+              <p className="text-gray-500 text-xs font-light leading-relaxed">Includes Photographer, On-site Support, and my personal management of the shoot.</p>
+            </li>
+            <li className="group">
+              <div className="flex justify-between items-center mb-1 text-sm tracking-wide">
+                <span className="text-white">One Day Session</span>
+                <span className="font-mono text-[10px] text-[#d4af37]">MUMBAI</span>
+              </div>
+              <p className="text-gray-500 text-xs font-light leading-relaxed">Hosted at Savoir Studio. Professional lighting setup designed specifically for bridal looks.</p>
             </li>
           </ul>
         </div>
@@ -592,17 +625,24 @@ const Investment = () => (
           <div className="space-y-6">
             <div className="border-b border-white/5 pb-6">
               <div className="flex justify-between items-end mb-2">
-                <span className="text-gray-300 font-light text-lg">Retainer Booking (60% Advance)</span>
-                <span className="text-white font-serif text-2xl">₹18,000</span>
+                <span className="text-gray-300 font-light text-lg">Monthly Brand Booking (60% Advance)</span>
+                <span className="text-white font-serif text-2xl">₹24,000</span>
               </div>
-              <p className="text-gray-500 text-sm font-light italic">Required to lock-in shoot dates and begin pre-production (Total: ₹30k).</p>
+              <p className="text-gray-500 text-sm font-light italic">Required to lock-in shoot dates and begin brand planning (Total: ₹40k).</p>
             </div>
             <div className="border-b border-white/5 pb-6">
               <div className="flex justify-between items-end mb-2">
                 <span className="text-gray-300 font-light text-lg">Digital Setup (60% Advance)</span>
                 <span className="text-white font-serif text-2xl">₹21,000</span>
               </div>
-              <p className="text-gray-500 text-sm font-light italic">Required to start website implementation and SEO audit (Total: ₹35k).</p>
+              <p className="text-gray-500 text-sm font-light italic">Required to start website launch and search setup (Total: ₹35k).</p>
+            </div>
+            <div className="border-b border-white/5 pb-6">
+              <div className="flex justify-between items-end mb-2">
+                <span className="text-gray-300 font-light text-lg">Website Commercial Shoot (50% Advance)</span>
+                <span className="text-white font-serif text-2xl">₹17,500</span>
+              </div>
+              <p className="text-gray-500 text-sm font-light italic">Optional. Required to book Savoir Studio & sync teams (Total: ~₹35k). Book 15 days prior.</p>
             </div>
             <div className="pt-4 space-y-3">
               <div className="flex justify-between text-xs tracking-widest uppercase text-[#d4af37]">
@@ -610,7 +650,7 @@ const Investment = () => (
                 <span>₹6,000 / day</span>
               </div>
               <div className="flex justify-between text-xs tracking-widest uppercase text-gray-400">
-                <span>Meta Ad Spends</span>
+                <span>Social Media Ad Spends</span>
                 <span>At Actuals</span>
               </div>
             </div>
@@ -631,28 +671,28 @@ const Contact = () => (
       
       <div>
         <h4 className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase mb-6 flex items-center gap-4">
-          <span className="w-8 h-[1px] bg-[#d4af37]"></span> The First 48 Hours (Timeline)
+          <span className="w-8 h-[1px] bg-[#d4af37]"></span> Starting Your Project (Timeline)
         </h4>
         <div className="space-y-8">
           <div className="flex gap-6">
             <div className="text-white font-serif italic text-2xl w-12 shrink-0">01.</div>
             <div>
-              <p className="text-white mb-2">Sign Master Agreement & Process Advance</p>
-              <p className="text-gray-500 text-sm font-light leading-relaxed">As soon as the advance reaches us, your dedicated spot in our production calendar is locked. We immediately assign your project team.</p>
+              <p className="text-white mb-2">Sign Plan & Book Your Slot</p>
+              <p className="text-gray-500 text-sm font-light leading-relaxed">As soon as the first payment is made, your spot in our calendar is locked. We immediately start preparing for your project.</p>
             </div>
           </div>
           <div className="flex gap-6">
             <div className="text-white font-serif italic text-2xl w-12 shrink-0">02.</div>
             <div>
-              <p className="text-white mb-2">Onboarding Discovery Call</p>
-              <p className="text-gray-500 text-sm font-light leading-relaxed">Happens within 24 hours of signing. We spend 60 minutes deep-diving into your target "Bride Persona" and local competition.</p>
+              <p className="text-white mb-2">Welcome Call</p>
+              <p className="text-gray-500 text-sm font-light leading-relaxed">We sync up within 24 hours. We spend an hour talking about your dream bridal clients and how we'll reach them.</p>
             </div>
           </div>
           <div className="flex gap-6">
             <div className="text-white font-serif italic text-2xl w-12 shrink-0">03.</div>
             <div>
-              <p className="text-white mb-2">Technical Data Request (Handover)</p>
-              <p className="text-gray-500 text-sm font-light leading-relaxed">You provide us access to your domain, previous work gallery, and design files for the chosen UI. Our engineers take over from here.</p>
+              <p className="text-white mb-2">Getting Access</p>
+              <p className="text-gray-500 text-sm font-light leading-relaxed">You provide us with your login details and existing work photos. My team takes it from here to build everything.</p>
             </div>
           </div>
         </div>
@@ -664,7 +704,7 @@ const Contact = () => (
         </div>
 
         <h4 className="text-[#d4af37] text-xs tracking-[0.5em] uppercase mb-16 text-center italic">
-          The Countdown to Season Dominance
+          Targeting the Wedding Season
         </h4>
 
         <div className="relative">
@@ -680,9 +720,9 @@ const Contact = () => (
                 APR <span className="text-2xl md:text-3xl italic">20</span>
               </div>
               <div className="space-y-1">
-                <p className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase">The Ignition</p>
-                <p className="text-white text-lg font-serif italic">The Contract is Inked.</p>
-                <p className="text-gray-500 text-xs font-light leading-relaxed">We lock your dates, setup your Meta suit, and begin the technical SEO audit. The machine starts turning.</p>
+                <p className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase">Step 01</p>
+                <p className="text-white text-lg font-serif italic">Project Start.</p>
+                <p className="text-gray-500 text-xs font-light leading-relaxed">We lock your dates, setup your social media tools, and start the website setup. The journey begins.</p>
               </div>
             </motion.div>
 
@@ -694,9 +734,9 @@ const Contact = () => (
                 MAY <span className="text-2xl md:text-3xl italic">10</span>
               </div>
               <div className="space-y-1">
-                <p className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase">The Transformation</p>
-                <p className="text-white text-lg font-serif italic">Digital Presence Live.</p>
-                <p className="text-gray-500 text-xs font-light leading-relaxed">Your new UI is deployed. Google starts indexing your authority. You now look like the safest bet for premium brides.</p>
+                <p className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase">Step 02</p>
+                <p className="text-white text-lg font-serif italic">Website Ready.</p>
+                <p className="text-gray-500 text-xs font-light leading-relaxed">Your new website is live. Brides can now find you on Google. You look like the best choice in the city.</p>
               </div>
             </motion.div>
 
@@ -708,9 +748,9 @@ const Contact = () => (
                 MAY <span className="text-2xl md:text-3xl italic">25</span>
               </div>
               <div className="space-y-1">
-                <p className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase">The Launch</p>
-                <p className="text-white text-lg font-serif italic">Campaign Activation.</p>
-                <p className="text-gray-500 text-xs font-light leading-relaxed">Your 8 cinema-grade reels begin reaching high-net-worth circles on Meta platforms, building essential brand awareness and visibility.</p>
+                <p className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase">Step 03</p>
+                <p className="text-white text-lg font-serif italic">Campaign Start.</p>
+                <p className="text-gray-500 text-xs font-light leading-relaxed">Your high-quality videos start reaching high-value clients on Instagram and Facebook, making you visible.</p>
               </div>
             </motion.div>
 
@@ -722,9 +762,9 @@ const Contact = () => (
                 JUNE <span className="text-2xl md:text-3xl italic">+</span>
               </div>
               <div className="space-y-1">
-                <p className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase">The Market Position</p>
-                <p className="text-white text-lg font-serif italic">Nurturing Authority.</p>
-                <p className="text-gray-500 text-xs font-light leading-relaxed">Strategic digital presence and professional interactions begin to synchronize, solidifying your reputation as a premium choice in the wedding ecosystem.</p>
+                <p className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase">Step 04</p>
+                <p className="text-white text-lg font-serif italic">Consistent Growth.</p>
+                <p className="text-gray-500 text-xs font-light leading-relaxed">Your brand is now steady. Strategic connections and daily inquiries solidify your position as a top bridal artist.</p>
               </div>
             </motion.div>
           </div>
@@ -732,9 +772,9 @@ const Contact = () => (
       </div>
 
       <div className="pt-12 border-t border-white/5">
-        <h4 className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase mb-6">Long-Term Growth Assurance</h4>
+        <h4 className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase mb-6">Your Ownership</h4>
         <p className="text-gray-400 text-sm leading-relaxed font-light italic">
-          "We offer 100% handover documentation, meaning you own everything we build. Even if we stop working together, your website, SEO engine, and content assets belong to you forever."
+          "You own everything we build. Even if we stop working together, your website and everything else belongs to you forever."
         </p>
       </div>
     </motion.div>
@@ -762,6 +802,98 @@ const Contact = () => (
   </motion.div>
 );
 
+const CommercialShoot = () => (
+  <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="space-y-16 max-w-6xl mx-auto">
+    <div className="space-y-8">
+      <motion.h2 variants={itemVariants} className="text-[#d4af37] text-xs md:text-sm tracking-[0.4em] uppercase">
+        Optional Add-on
+      </motion.h2>
+      <motion.h1 variants={itemVariants} className="font-serif text-5xl md:text-7xl leading-tight text-white font-normal uppercase">
+        Website <br />
+        <span className="italic text-[#d4af37] underline underline-offset-8">Commercial Shoot.</span>
+      </motion.h1>
+      <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-400 leading-relaxed font-light max-w-3xl">
+        For those who want to launch with a high-impact cinematic presence. This professional shoot is designed specifically for your new website’s main visuals.
+      </motion.p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <motion.div variants={itemVariants} className="space-y-8">
+        <div className="border border-white/10 p-8 space-y-6 bg-white/[0.02] hover:border-[#d4af37]/30 transition-colors duration-700">
+          <h3 className="font-serif text-2xl text-white italic capitalize">The deliverables</h3>
+          <ul className="space-y-4 text-gray-300 font-light">
+            <li className="flex items-start">
+              <span className="text-[#d4af37] mr-4 mt-1 text-xs">✦</span>
+              <span>1 Horizontal Video for Website Hero Section</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#d4af37] mr-4 mt-1 text-xs">✦</span>
+              <span>Professional Photographer & Creative Direction</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#d4af37] mr-4 mt-1 text-xs">✦</span>
+              <span>Technical Lighting & Cinema Gear Support</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-[#d4af37] mr-4 mt-1 text-xs">✦</span>
+              <span>Raw Assets + 15 High-End Edited Images</span>
+            </li>
+          </ul>
+        </div>
+
+        <div className="space-y-4">
+          <div className="flex justify-between items-end border-b border-white/10 pb-4">
+            <span className="text-gray-400 uppercase tracking-widest text-xs">Estimated Cost</span>
+            <span className="text-white font-serif text-2xl">~₹35,000</span>
+          </div>
+          <p className="text-gray-500 text-xs italic">Final cost may vary based on specific creative requirements.</p>
+        </div>
+      </motion.div>
+
+      <motion.div variants={itemVariants} className="space-y-8">
+        <div className="space-y-8">
+          <div className="flex items-start gap-6">
+            <div className="w-10 h-10 border border-[#d4af37]/30 flex items-center justify-center shrink-0">
+              <span className="text-[#d4af37] text-xs font-serif uppercase tracking-widest">LOC</span>
+            </div>
+            <div>
+              <h4 className="text-white text-lg font-serif">Savoir Studio, Mumbai</h4>
+              <p className="text-gray-500 text-sm font-light mt-1 leading-relaxed">
+                Preferred luxury studio setting in Mumbai. Note: <span className="text-gray-300">I will handle the location sourcing, studio locking, and the creative theme design to ensure it matches your brand perfectly.</span>
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-6">
+            <div className="w-10 h-10 border border-[#d4af37]/30 flex items-center justify-center shrink-0">
+              <span className="text-[#d4af37] text-xs font-serif uppercase tracking-widest">BKG</span>
+            </div>
+            <div>
+              <h4 className="text-white text-lg font-serif">Booking Requirements</h4>
+              <div className="space-y-2 mt-2">
+                <p className="text-gray-400 text-sm font-light flex justify-between border-b border-white/5 pb-1 max-w-xs">
+                  <span>Advance Payment</span>
+                  <span className="text-white">50%</span>
+                </p>
+                <p className="text-gray-400 text-sm font-light flex justify-between max-w-xs">
+                  <span>Notice Required</span>
+                  <span className="text-white">15 Days Prior</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="p-6 bg-[#d4af37]/5 border border-[#d4af37]/20">
+          <p className="text-white text-xs font-light leading-relaxed">
+            <span className="text-[#d4af37] font-medium uppercase tracking-tighter">Note for artists:</span> This shoot is optional but highly recommended to ensure your website visuals match the high-end quality of the design we are building.
+          </p>
+        </div>
+      </motion.div>
+    </div>
+  </motion.div>
+);
+
 export default function App() {
   const [activeTab, setActiveTab] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -771,6 +903,7 @@ export default function App() {
     { name: 'Phase 2', component: Phase2 },
     { name: 'Phase 3', component: Phase3 },
     { name: 'References', component: References },
+    { name: 'Commercial Shoot', component: CommercialShoot },
     { name: 'Timeline', component: Timeline },
     { name: 'Investment', component: Investment },
     { name: 'Contact', component: Contact },
