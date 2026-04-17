@@ -402,6 +402,58 @@ const References = () => (
   </motion.div>
 );
 
+const BrandPillars = () => (
+  <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="max-w-6xl mx-auto py-24 border-t border-white/5">
+    <motion.div variants={itemVariants} className="text-center mb-20">
+      <h2 className="text-[#d4af37] text-xs tracking-[0.4em] uppercase mb-6">The Methodology</h2>
+      <h1 className="font-serif text-4xl md:text-6xl leading-tight mb-6">
+        The Four Pillars of <br/><span className="italic underline underline-offset-8 decoration-[#d4af37]/30">Brand Authority.</span>
+      </h1>
+    </motion.div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        { 
+          title: "Visual Dominance", 
+          desc: "Establishing a visual language that looks expensive and exclusive, moving away from generic social media styles.",
+          icon: "✦"
+        },
+        { 
+          title: "Digital Ecosystem", 
+          desc: "Building a high-performance website and Google presence that serves as your 24/7 luxury storefront.",
+          icon: "✧"
+        },
+        { 
+          title: "Elite Network", 
+          desc: "Active outreach to high-end planners and brands to place you in the path of 'budget-is-no-issue' clients.",
+          icon: "❃"
+        },
+        { 
+          title: "Brand Management", 
+          desc: "Total alignment of your voice, portfolio, and positioning to build a lasting legacy in the bridal industry.",
+          icon: "❂"
+        }
+      ].map((pillar, idx) => (
+        <motion.div 
+          key={idx}
+          variants={itemVariants}
+          className="p-8 border border-white/10 bg-white/[0.01] hover:bg-white/[0.03] transition-all duration-700 group"
+        >
+          <div className="text-[#d4af37] text-2xl mb-6 group-hover:scale-110 transition-transform duration-500 inline-block">
+            {pillar.icon}
+          </div>
+          <h4 className="text-white font-serif text-xl mb-4 group-hover:text-[#d4af37] transition-colors duration-500 font-normal italic">
+            {pillar.title}
+          </h4>
+          <p className="text-gray-500 text-sm font-light leading-relaxed">
+            {pillar.desc}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  </motion.div>
+);
+
 const Timeline = () => (
   <motion.div variants={containerVariants} initial="hidden" animate="show" exit="exit" className="max-w-4xl mx-auto">
     <motion.div variants={itemVariants} className="text-center mb-20">
@@ -416,35 +468,35 @@ const Timeline = () => (
     <div className="ml-4 md:ml-8">
       <TimelineItem 
         month="APR 20 - MAY 10"
-        title="Website Setup & Booking System"
-        desc="Establishing your online presence and prepping it for local search."
+        title="Infrastructure & Authority"
+        desc="Establishing your premium digital storefront and preparing for high-value search visibility."
         details={[
-          "Researching local competition and mapping out how we will win on Google.",
-          "Building your fast and secure website to showcase your portfolio beautifully.",
-          "Setting up the inquiry form to automatically filter out budget-shoppers.",
-          "Final checks and launching your site to be found by brides-to-be."
+          "Competitor Dissection: Mapping exactly how the top 1% of artists in Mumbai are winning.",
+          "Digital Foundation: Building a high-performance website optimized for phone conversions.",
+          "Lead Qualification: Engineering booking forms that automatically filter for luxury clients.",
+          "SEO Calibration: Targeting high-intent search terms used by luxury wedding planners."
         ]}
       />
       <TimelineItem 
         month="MAY 10 - MAY 31"
-        title="Photos, Videos & Ads"
-        desc="Capturing your premium photos and videos and launching your social media ads."
+        title="Asset Production & Ads"
+        desc="Executing your first major brand shoots and launching high-precision advertising."
         details={[
-          "Planning the shoot style, choosing locations, and picking the right themes.",
-          "Production Day: 2 Full Days using high-quality professional equipment.",
-          "Editing Phase: Creating high-quality social media reels and color-graded photos.",
-          "Launching your Social Media Ads to start reaching serious clients in high-net-worth circles."
+          "Creative Direction: Fully planned mood boards and lighting setups for 2 production days.",
+          "Cinematic Content: Delivering high-end Reels and portraits designed for high CTR ads.",
+          "Ad Deployment: Launching your social media ad sets targeting exclusive interest groups.",
+          "Feedback Loop: Monitoring initial data to double down on the creative that works best."
         ]}
       />
       <TimelineItem 
         month="JUNE & BEYOND"
-        title="Scaling & Growth"
-        desc="Using your new premium look to get referrals and steady bookings."
+        title="Authority & Scaling"
+        desc="Leveraging your new digital presence to solidify elite relationships and high-value referrals."
         details={[
-          "Creating a professional 'Portfolio Catalog' to share with top wedding planners.",
-          "Introductions to the top 20 luxury wedding planners in your city.",
-          "Ensuring you are on the 'Recommended Artist' lists for planners.",
-          "Monthly check-ins to review your growth and plan new moves."
+          "B2B Catalog Deployment: Delivering physical and digital portfolio catalogs to targeted planners.",
+          "Elite Networking: Active 1-on-1 introductions and relationship building with luxury coordinators.",
+          "Strategic Partnerships: Initiating brand collaboration shoots with high-end bridal couture houses.",
+          "Performance Analytics: Deep-dive monthly reviews to optimize your search rank and lead quality."
         ]}
       />
     </div>
@@ -670,29 +722,67 @@ const Contact = () => (
     <motion.div variants={itemVariants} className="max-w-3xl mx-auto text-left space-y-12 mb-20 bg-[#0a0a0a] border border-white/10 p-8 md:p-12">
       
       <div>
-        <h4 className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase mb-6 flex items-center gap-4">
-          <span className="w-8 h-[1px] bg-[#d4af37]"></span> Starting Your Project (Timeline)
+        <h4 className="text-[#d4af37] text-[10px] tracking-[0.3em] uppercase mb-10 flex items-center gap-4">
+          <span className="w-8 h-[1px] bg-[#d4af37]"></span> Starting Your Project (Process)
         </h4>
-        <div className="space-y-8">
+        <div className="space-y-12">
           <div className="flex gap-6">
             <div className="text-white font-serif italic text-2xl w-12 shrink-0">01.</div>
             <div>
-              <p className="text-white mb-2">Sign Plan & Book Your Slot</p>
-              <p className="text-gray-500 text-sm font-light leading-relaxed">As soon as the first payment is made, your spot in our calendar is locked. We immediately start preparing for your project.</p>
+              <p className="text-white mb-2 font-medium">Securing Your Strategy Slot</p>
+              <p className="text-gray-500 text-sm font-light leading-relaxed mb-4">Your spot in our calendar is confirmed upon the initial 60% booking. This allows us to immediately allocate our production team and begin the preliminary market research for your specific region.</p>
+              <ul className="text-gray-600 text-[11px] uppercase tracking-wider space-y-2">
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-[#d4af37] rounded-full"></span> Contract Formalization</li>
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-[#d4af37] rounded-full"></span> Production Dates Locked</li>
+              </ul>
             </div>
           </div>
+
           <div className="flex gap-6">
             <div className="text-white font-serif italic text-2xl w-12 shrink-0">02.</div>
             <div>
-              <p className="text-white mb-2">Welcome Call</p>
-              <p className="text-gray-500 text-sm font-light leading-relaxed">We sync up within 24 hours. We spend an hour talking about your dream bridal clients and how we'll reach them.</p>
+              <p className="text-white mb-2 font-medium">The Brand Immersion Call</p>
+              <p className="text-gray-500 text-sm font-light leading-relaxed mb-4">A 60-minute intensive session within 24 hours. We move beyond "makeup" and talk about the lifestyle, values, and psychology of your highest-paying bridal clients.</p>
+              <ul className="text-gray-600 text-[11px] uppercase tracking-wider space-y-2">
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-[#d4af37] rounded-full"></span> Target Audience Mapping</li>
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-[#d4af37] rounded-full"></span> Tone of Voice Definition</li>
+              </ul>
             </div>
           </div>
+
           <div className="flex gap-6">
             <div className="text-white font-serif italic text-2xl w-12 shrink-0">03.</div>
             <div>
-              <p className="text-white mb-2">Getting Access</p>
-              <p className="text-gray-500 text-sm font-light leading-relaxed">You provide us with your login details and existing work photos. My team takes it from here to build everything.</p>
+              <p className="text-white mb-2 font-medium">Asset Handover & Audit</p>
+              <p className="text-gray-500 text-sm font-light leading-relaxed mb-4">We collect your high-resolution portfolio and audit your current digital touchpoints. This ensures we are not just starting from zero, but elevating what already makes your work unique.</p>
+              <ul className="text-gray-600 text-[11px] uppercase tracking-wider space-y-2">
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-[#d4af37] rounded-full"></span> Portfolio Content Collection</li>
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-[#d4af37] rounded-full"></span> Digital Presence Review</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex gap-6">
+            <div className="text-white font-serif italic text-2xl w-12 shrink-0">04.</div>
+            <div>
+              <p className="text-white mb-2 font-medium">Strategic Roadmap Delivery</p>
+              <p className="text-gray-500 text-sm font-light leading-relaxed mb-4">We present your 3-month Brand Roadmap, including the first set of mood boards for our production days and the blueprint for your new Google-optimized website.</p>
+              <ul className="text-gray-600 text-[11px] uppercase tracking-wider space-y-2">
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-[#d4af37] rounded-full"></span> Initial Mood Boards</li>
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-[#d4af37] rounded-full"></span> Website Visual Concept</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="flex gap-6">
+            <div className="text-white font-serif italic text-2xl w-12 shrink-0">05.</div>
+            <div>
+              <p className="text-white mb-2 font-medium">Production & Execution</p>
+              <p className="text-gray-500 text-sm font-light leading-relaxed mb-4">Action begins. We host the first production day in your space and initiate the website development. Within 20 days, your brand shift is visible to the market.</p>
+              <ul className="text-gray-600 text-[11px] uppercase tracking-wider space-y-2">
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-[#d4af37] rounded-full"></span> First Production Day</li>
+                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-[#d4af37] rounded-full"></span> Website Development Start</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -899,6 +989,7 @@ export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const tabs = [
     { name: 'The Vision', component: Vision },
+    { name: 'Methodology', component: BrandPillars },
     { name: 'Phase 1', component: Phase1 },
     { name: 'Phase 2', component: Phase2 },
     { name: 'Phase 3', component: Phase3 },
@@ -914,12 +1005,12 @@ export default function App() {
       
       {/* Cinematic Makeup Background */}
       <div 
-        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30 mix-blend-luminosity"
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20 mix-blend-luminosity grayscale"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1512496015851-a1dc8a47159c?q=80&w=2000&auto=format&fit=crop")' }}
       ></div>
       
       {/* Gradient Overlay to ensure text readability */}
-      <div className="fixed inset-0 z-0 bg-gradient-to-b from-[#050505]/60 via-[#050505]/90 to-[#050505] pointer-events-none"></div>
+      <div className="fixed inset-0 z-0 bg-gradient-to-b from-[#050505]/40 via-[#050505]/95 to-[#050505] pointer-events-none"></div>
 
       {/* Subtle Noise Overlay for premium texture */}
       <div 
@@ -931,18 +1022,18 @@ export default function App() {
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#d4af37] opacity-[0.04] blur-[120px] rounded-full pointer-events-none z-0"></div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 h-24 flex items-center justify-between">
-          <div className="font-serif text-2xl tracking-widest text-white flex items-center gap-3">
-            MBN <span className="text-[#d4af37] text-sm font-sans font-light italic">x</span> INDIA
+      <nav className="fixed top-0 w-full z-50 bg-[#050505]/80 backdrop-blur-2xl border-b border-white/5">
+        <div className="max-w-[1500px] mx-auto px-6 md:px-10 h-24 flex items-center justify-between">
+          <div className="font-serif text-2xl tracking-[0.3em] text-white flex items-center gap-4 shrink-0">
+            MBN <span className="text-[#d4af37] text-xs font-sans font-extralight italic opacity-70">x</span> INDIA
           </div>
-          <div className="hidden lg:flex space-x-6 xl:space-x-10">
+          <div className="hidden lg:flex items-center space-x-3 xl:space-x-7">
             {tabs.map((tab, index) => (
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`text-xs tracking-[0.2em] uppercase transition-all duration-500 relative py-2 ${
-                  activeTab === index ? 'text-white' : 'text-gray-500 hover:text-white'
+                className={`text-[10px] xl:text-xs tracking-[0.2em] uppercase transition-all duration-500 relative py-2 px-1 ${
+                  activeTab === index ? 'text-white font-medium' : 'text-gray-500 hover:text-white'
                 }`}
               >
                 {tab.name}
