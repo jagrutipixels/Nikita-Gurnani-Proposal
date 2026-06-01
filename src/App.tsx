@@ -314,7 +314,7 @@ const References = () => (
       </p>
     </motion.div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
       <motion.a 
         href="https://in.pinterest.com/pin/184155072257217524/"
         target="_blank"
@@ -373,6 +373,26 @@ const References = () => (
           <div className="text-[#d4af37] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-2 md:mb-3">Direction 03</div>
           <h3 className="font-serif text-xl md:text-2xl mb-2 text-white">Final Look</h3>
           <p className="text-gray-400 text-xs md:text-sm font-light">High-end portraits that feel like they belong on a magazine cover.</p>
+        </div>
+      </motion.a>
+      <motion.a 
+        href="https://www.instagram.com/shradhaluthra/reels/"
+        target="_blank"
+        rel="noopener noreferrer"
+        variants={itemVariants} 
+        className="group relative aspect-[4/5] overflow-hidden border border-white/10 block bg-[#0a0a0a]"
+      >
+        <img 
+          src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6ece?q=80&w=1988&auto=format&fit=crop" 
+          alt="Cinematic Movement Reference"
+          referrerPolicy="no-referrer"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60 mix-blend-luminosity"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 p-6 md:p-8 w-full">
+          <div className="text-[#d4af37] text-[10px] md:text-xs tracking-[0.3em] uppercase mb-2 md:mb-3">Direction 04</div>
+          <h3 className="font-serif text-xl md:text-2xl mb-2 text-white">Cinematic Movement</h3>
+          <p className="text-gray-400 text-xs md:text-sm font-light">Inspired by Shradha Luthra's highly engaging and premium video reel aesthetic.</p>
         </div>
       </motion.a>
     </div>
